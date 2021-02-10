@@ -1,45 +1,149 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome USER_NAME,
+# Milestone Project 2
+---
+## Purpose
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
 
-## Gitpod Reminders
+This site was designed for the second milestone project in Full Stack Software Development with the Code Institute, based on the learnings from HTML, CSS and User Centric Design,  JavaScript Fundamentals and Interactive Frontend Development modules.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+---
 
-`python3 -m http.server`
+## Maths Tables
 
-A blue button should appear to click: *Make Public*,
+I decided to create a maths game aimed at primary school children and 
+their parents, to aid in the learning of the basic mathematics of 
+addition, subtraction, multiplication and division. The idea came to me 
+while home-schooling my children during COVID-19 enforced lockdown. 
+The aim is to turn the learning experience into a game so that children 
+are distracted and are learning at the same time. The game is based on 
+the 1 to 12 tables that are taught in schools, a selection of which 
+number and type of arithmetic can be made with the game then provides 
+questions based on the selection. 
 
-Another blue button should appear to click: *Open Browser*.
+---
+### User Experience (UX)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### User Stories:
+*As a Site User:*
+* I want to immediately understand the nature of the site and be able to easily navigate through the site.
+* I want to be easily able to understand the rules of the game.
+* I want to be easily able to make a selection of  the type of game to play.
+* I want to know if my answer is correct or incorrect.
+* I want to track my progress during the game.
+* I want to be able to access the site from all device types.
 
-A blue button should appear to click: *Make Public*,
 
-Another blue button should appear to click: *Open Browser*.
+## Structure:
+The main aim of this game is to create a fun learning tool for children, that is easy to navigate and easy to use. It should be appealing to users, but not distracting to the overall learning experience that the game provides. With this in mind I have designed a simple site with only limited navigation options.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The Home page will have a  bright colourful image, with simple text explaining the purpose of the game. There will be two buttons below the text that will mirror the navigations items in the header. These will be for information and start games.
 
-## Updates Since The Instructional Video
+The Info for the game will appear as a modal over the home page. This will give the instructions on how to select a game and start it. It will also detail the different game selection options.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The Games/Start Games option will again be a modal over the home page. Within this there will be bootstrap accordion for selecting either addition, subtraction, multiplication or division. There will also be a dropdown menu for selecting the table number (1-12) that will be used for the game.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The Game page will have a simple layout with a bright background and the maths questions displayed in large clear fonts. An input box will be clearly labelled for the answer to be entered into. At the top of the page score for the game will be displayed. On input a modal will appear confirming a correct or incorrect answer. For an incorrect guess, the correct answer will also be displayed. For both modals there will be options to either continue playing or return to the Home page.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Design:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Colour scheme: 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+The colour scheme for the site consists of Yellow, Blue and Red. These were chosen as they are bright colours to catch the attention of children, but not too distracting that they pull a user from the game play. The text will be Black as it will stand out best against these colours.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Typography:
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+The main font used throughout the site is Pangolin, which has a handwritten look about it that is less formal that other typed fonts. Sans Serif is used as a fallback font.
 
---------
+Imagery:
+ 
+The site logo I created using Free Logo Design (https://www.freelogodesign.org/)
 
-Happy coding!
+The home page image was taken by Magda Ehlers and I obtained it from Pexels
+
+
+Wireframes:
+
+Here is the wireframes that I used as the basis of the design
+for the site. These were created using Balsamiq.
+
+
+
+ 
+
+### Differences to Design
+
+
+### Features to be Implemented in Future
+
+
+
+---
+## Technologies Used
+* HTML -  HTML is the main language used for the structure of the site.
+* CSS - Custom written CSS is used to style the site.
+* Bootstrap – The layout and styling of the site was help by the use of Bootstrap framework.
+* Google Fonts -The font of Open Sans was imported from Google Fonts.
+* Font Awesome – Was used to obtain the social media icons used.
+* Balsamiq – Was used to create the wireframes of the site on the various devices.
+* Adobe Photoshop Express - Used to resize images used on the site. https://www.adobe.com/ie/photoshop/online/resize-image.html
+* Git - Git is used for the version control of changes throughout the project.
+* GitPod – was used as the coding space for the project.
+* Github - was used to host the project files and publish the live website by using Git Pages.
+* Autoprefixer - was used to parse  CSS and add vendor prefixes to CSS rules via https://autoprefixer.github.io/
+* W3 HTML Validation was done via https://validator.w3.org/
+* W3 CSS Validation was done via https://jigsaw.w3.org/css-validator/
+* Google Chrome DevTools – was used extensively during coding to check the responsiveness of the site with the addition of new features.
+---
+# Testing
+
+--- 
+
+# Deployment
+
+##  GitHub Project Creation
+To create the project the following steps were used:
+
+* In GitHub repositories section click the green 'New' button 
+* Select the Code Institute template
+* Name the repository and give a brief description
+* Set repository to 'Public' to ensure the commit history is visible
+* Click 'Create repository'
+
+## Deploy with GitHub Pages
+The website was deployed as follows:
+
+* Open the repository in GitHub
+* Navigate to the 'Settings' tab
+* Scroll down to 'GitHub Pages' section
+* Select 'Branch Master' as the source
+* Click the save button
+* Click on the link to go to the live deployed page
+
+
+## Run Locally
+To run the code locally:
+
+* Navigate to the repository
+* Click the 'Code' drop down menu
+* Select to copy the GitHub URL from HTTPS box or 'Download Zip'
+* Open a new terminal and type 'git clone' command in the CLI and paste copied URL
+* Alternatively, click 'Open with GitHub Desktop' and follow the steps to complete the clone
+---
+# Issues Encountered
+
+
+---
+
+# Credits
+
+
+
+---
+
+# Acknowledgments
+
+* My Mentor, Gurjot Singh, for his feedback and support throughout the project.
+
+* The Slack community for their support, encouragement and assistance in finding answers 
+to my project problems.
