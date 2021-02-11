@@ -1,0 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+body {
+  font-family: "Open-Sans", sans-serif;
+  letter-spacing: 2px;
+ }
+
+ /*----- Header -------  */
+ .bg-nav {
+  background: transparent;
+}
+
+.logo{
+    width:120px;
+    height:120px;
+}
