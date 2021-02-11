@@ -15,3 +15,24 @@ body {
     width:120px;
     height:120px;
 }
+
+/*----- Hero Image -------  */
+
+.hero-image {
+   
+    background: url("../images/numbers.jpg");   
+    height: 150vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 0;
+    
+}
+
+.jumbo-color{
+    color: #000;
+}
