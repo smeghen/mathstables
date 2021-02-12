@@ -45,6 +45,16 @@ body {
     width: 50%;
 }
 
+/*----- Info Modal -------  */
+
+.info-text{
+    text-align: center;
+}
+
+.modal-bg{
+    background-color: rgba(255, 223, 2, 0.9);
+}
+
 /*---- Media Queries ----*/
 
 @media (max-width: 768px){
