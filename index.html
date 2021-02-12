@@ -40,26 +40,73 @@
 
     <!-- Hero Image-->
     <section>
- <div
-    class="text-center hero-image">
-    <div class="mask jumbotron jumbotron-fluid" style="background-color: rgba(0, 0, 0, 0.2)">
-        <div>
-          <h1 class="jumbo-text jumbo-color">Maths Tables</h1>
-          <h4 class="jumbo-text jumbo-color">Games to help you learn the 1 to 12 tables
-              for addition, subtraction, multiplication
-              and division.</h4>
-          <a class="btn btn-info btn-lg" href="#!" role="button"
-            >Info</a
-          >
-          <a class="btn btn-danger btn-lg" href="#!" role="button"
-            >Games</a
-          >
+        <div class="text-center hero-image">
+            <div class="mask jumbotron jumbotron-fluid" style="background-color: rgba(0, 0, 0, 0.2)">
+                <div>
+                    <h1 class="jumbo-text jumbo-color">Maths Tables</h1>
+                    <h4 class="jumbo-text jumbo-color">Games to help you learn the 1 to 12 tables
+                        for addition, subtraction, multiplication
+                        and division.</h4>
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#infoModal">
+                        Info
+                    </button>
+                    <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#gamesModal">
+                        Games
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  
-  </section>
-  <!-- End Hero Image-->
+    </section>
+    <!-- End Hero Image-->
+
+
+    <!-- Info Modal -->
+    <section>
+        <div class="modal fade " id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="infoModalLabel">Info</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Info Modal -->
+
+    <!-- Games Modal -->
+    <section>
+        <div class="modal fade " id="gamesModal" tabindex="-1" aria-labelledby="gamesModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gamesModalLabel">Games</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Games Modal -->
 
 
 
