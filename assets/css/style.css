@@ -55,6 +55,14 @@ body {
     background-color: rgba(255, 223, 2, 0.9);
 }
 
+
+/*----- Game -------  */
+
+.game-text{
+    font-size: 5em;
+}
+
+
 /*---- Media Queries ----*/
 
 @media (max-width: 768px){
