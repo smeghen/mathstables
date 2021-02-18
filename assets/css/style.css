@@ -16,6 +16,8 @@ body {
     height:150px;
 }
 
+
+
 /*----- Hero Image -------  */
 
 .hero-image {
@@ -58,12 +60,20 @@ body {
 
 /*----- Game -------  */
 
+.game-color{
+    color: #ffffff;
+}
+
 .game-text{
     font-size: 5em;
 }
 
 .card-body{
     margin-top: 10%;
+}
+
+.game-card {
+    background-color: rgba(0, 0, 0, 0.7)
 }
 
 
