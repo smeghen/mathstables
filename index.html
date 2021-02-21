@@ -87,9 +87,10 @@
                     </div>
                     <div class="container-fluid text-center">
                         <button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Home</button>
-                        <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#gamesModal">
-                        Games
-                    </button>
+                        <button type="button" id="infogames" class="btn btn-danger btn-lg" data-toggle="modal"
+                            data-dismiss="modal" data-target="#gamesModal">
+                            Games
+                        </button>
                     </div>
                 </div>
             </div>
@@ -109,9 +110,9 @@
                         </button>
                     </div>
                     <div class="modal-body d-flex justify-content-center">
-                     <h2>Select Game Type and Tables</h2>
-                     
-                     </div>
+                        <h2>Select Game Type and Tables</h2>
+
+                    </div>
                     <div class="modal-body d-flex justify-content-evenly">
                         <div class="input-group input-group-lg">
                             <label class="input-group-text" for="gameType">Game Types</label>
@@ -145,9 +146,10 @@
                     </div>
                     <div class="container-fluid text-center">
                         <button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Home</button>
-                        <a role="button" class="btn btn-danger btn-lg" href="#" onclick="getGameType(); getTableNumber()">Start</a>
+                        <a role="button" class="btn btn-danger btn-lg" href="#"
+                            onclick="getGameType(); getTableNumber()">Start</a>
                         <p id="result1">Type</p>
-                            <p id="result2">Number</p>
+                        <p id="result2">Number</p>
                     </div>
                 </div>
             </div>
