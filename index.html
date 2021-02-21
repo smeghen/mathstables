@@ -98,7 +98,7 @@
     </section>
     <!-- End Info Modal -->
 
-    <!-- Games Modal -->
+    <!-- Games Select Modal -->
     <section>
         <div class="modal fade " id="gamesModal" tabindex="-1" aria-labelledby="gamesModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
@@ -146,14 +146,47 @@
                     </div>
                     <div class="container-fluid text-center">
                         <button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Home</button>
-                        <a role="button" class="btn btn-danger btn-lg" href="game.html"
-                            onclick="getGameType(); getTableNumber()">Start</a>
+                        <button type="button" id="gameselect" class="btn btn-danger btn-lg" data-toggle="modal"
+                            data-dismiss="modal" data-target="#gameModal"
+                            onclick="getGameType(); getTableNumber()">Start</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Games Modal -->
+    <!-- End Games Select Modal -->
+
+    <!-- Game Modal -->
+    <section>
+        <div class="modal fade " id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content text-center modal-bg">
+                    <div class="container-fluid text-center">
+                        <h1 class="modal-title" id="gameModalLabel">Game</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="modal-body d-flex justify-content-center">
+                            <h1>Game</h1>
+                        </div>
+                        <h4>Score: </h4>
+                        <div class="card-body">
+                            <div class="card-text game-text">
+                                <div class="d-inline-block" id="operand1">5</div>
+                                <div class="d-inline-block" id="add">+</div>
+                                <div class="d-inline-block" id="operand2">#</div>
+                                <div class="d-inline-block" id="equal">=</div>
+                                <input class="col-sm-4 rounded" type="text" id="guess">
+                                <p><button class="btn btn-info btn-lg" id="startgame">Start</button>
+                                    <button class="btn btn-danger btn-lg" id="enterguess">Enter</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
 
 
