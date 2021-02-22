@@ -4,8 +4,13 @@ function getGameType(){
                 var type = gameType.options[gameType.selectedIndex].value;
                 if (type === "Choose a Game to Play" ){
                  alert("Not valid input for Game Type");
+                  
                 }
                 else{
+                    /*if else loop to get +-*% Symbol on game modal
+                    if type === add getElementById = +
+                    if type === sub getElementById = -
+                    */
                     
                 return type;
                 }
