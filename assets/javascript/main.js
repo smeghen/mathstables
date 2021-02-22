@@ -28,3 +28,22 @@ function getTableNumber(){
                 return number;
                 }
             }
+
+
+ /*    Code for validating dropdown menu selection found on Stackoverflow and modified https://stackoverflow.com/questions/15371162/javascript-dropdown-validation-and-alert */
+function validateInput(){
+                var gameType = document.getElementById("gameType");
+                var type = gameType.options[gameType.selectedIndex].value;
+                var tableNumber = document.getElementById("tableNumber");
+                var number = tableNumber.options[tableNumber.selectedIndex].value;
+                if (type === "Choose a Game to Play" ||
+                number === "Choose the tables for the Game")
+                {
+                 alert("Selections not made correctly.");
+                 return false;
+                }
+                else{
+                document.getElementById("selectedType").innerHTML = type;
+                document.getElementById("selectedNumber").innerHTML = number; 
+                }
+            }
