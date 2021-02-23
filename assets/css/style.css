@@ -60,6 +60,9 @@ body {
 
 /*----- Games Select Modal -------  */
 
+#selection{
+    display: none;
+}
  
 #letsgo{
     display: none;

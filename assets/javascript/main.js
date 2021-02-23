@@ -46,16 +46,28 @@ function validateInput() {
         function hideStart() {
             var validatebutton = document.getElementById("validate");
             var letsgobutton = document.getElementById("letsgo");
-            if (validatebutton.style.display === "none") {
+            var type = document.getElementById("type");
+            var selection = document.getElementById("selection");
+
+            if (validatebutton.style.display === "none"           
+             )
+               {
                 validatebutton.style.display = "block";
+                type.style.display = "block";
+                
             } else {
                 validatebutton.style.display = "none";
+                type.style.display = "none";
+                
+           
             }
             if (letsgobutton.style.display === "block") {
                 letsgobutton.style.display = "none";
+                selection.style.display = "none";
             }
             else {
                 letsgobutton.style.display = "block";
+                selection.style.display = "block";
             }
 
         }
