@@ -158,7 +158,8 @@
                         <button type="button" class="btn btn-info btn-lg" data-dismiss="modal" id="home">Home</button>
                         <button type="button" class="btn btn-danger btn-lg" id="validate"
                             onclick="validateInput()">Select</button>
-                        <button type="button" class="btn btn-danger btn-lg letsgo" id="letsgo" onclick="">Let's
+                        <button type="button" class="btn btn-danger btn-lg letsgo" id="letsgo" onclick="getTableNumber();getGameType()" data-toggle="modal"
+                            data-dismiss="modal" data-target="#gameModal">Let's
                             Go</button>
 
                     </div>
@@ -186,9 +187,9 @@
                         <h4>Score: </h4>
                         <div class="card-body">
                             <div class="card-text game-text">
-                                <div class="d-inline-block" id="operand1">5</div>
-                                <div class="d-inline-block" id="add">+</div>
-                                <div class="d-inline-block" id="operand2">#</div>
+                                <div class="d-inline-block" id="operand1">?</div>
+                                <div class="d-inline-block" id="operand3"></div>
+                                <div class="d-inline-block" id="operand2"></div>
                                 <div class="d-inline-block" id="equal">=</div>
                                 <input class="col-sm-4 rounded" type="text" id="guess">
                                 <p><button class="btn btn-info btn-lg" id="startgame">Start</button>
