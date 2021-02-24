@@ -72,9 +72,21 @@ function validateInput() {
 /*  Random number generator between 1 and 12. Display on game */
 document.getElementById("startgame").addEventListener("click", displayRandomNumber);
 function displayRandomNumber() {
+    let choice = document.getElementById("selectedType");
+    let numChoice = document.getElementById("selectedNumber");
+    
+    if (choice === "Addtion" || "Multiplication"){
     let firstNum = parseInt(Math.random() * 12) + 1;
     document.getElementById("operand1").textContent = firstNum;
+} else if(choice === "Subtraction"){
+    let firstNum = parseInt(random(substraction === numChoice/*array of numbers from subtraction tables*/));
+    document.getElementById("operand1").textContent = firstNum;
+} else if(choice === "Division"){
+    let firstNum = parseInt(random(division === numChoice/*array of numbers from division tables*/));
+    document.getElementById("operand1").textContent = firstNum;
 }
+}
+
 
 /* Functions for calculations */
 function addNumbers() {
