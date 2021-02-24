@@ -100,3 +100,17 @@ function divNumbers(){
 	let num2 = parseInt(document.getElementById("operand2").value);
     return [num1 / num2];  
 }
+
+/* Function calls the different calculation functions depending on the user selection*/
+function runGame(){
+ let game = document.getElementById("selectedType");
+  if (game === "Addition"){
+     addNumbers();
+  } else if (game === "Subtraction"){
+      subNumbers();
+  } else if (game === "Multiplication"){
+      multNumbers();
+  } else if (game === "Division"){
+      divNumbers();
+  }
+}
