@@ -13,7 +13,7 @@ function getGameType() {
          document.getElementById("operand3").innerHTML = "x";
     }
     else if(type === "Division") {
-         document.getElementById("operand3").innerHTML = "%";
+         document.getElementById("operand3").innerHTML = "/";
     }
 }
 /* Function takes the number selection from dropdown menu, and displays it on Game Modal*/
@@ -72,7 +72,7 @@ function validateInput() {
 /*  Random number generator between 1 and 12. Display on game */
 document.getElementById("startgame").addEventListener("click", displayRandomNumber);
 function displayRandomNumber() {
-    let firstNum = parseInt(Math.random() * 12);
+    let firstNum = parseInt(Math.random() * 12) + 1;
     document.getElementById("operand1").textContent = firstNum;
 }
 
