@@ -76,4 +76,27 @@ function displayRandomNumber() {
     document.getElementById("operand1").textContent = firstNum;
 }
 
+/* Functions for calculations */
+function addNumbers() {
+    let num1 = parseInt(document.getElementById("operand1").value);
+	let num2 = parseInt(document.getElementById("operand2").value);
+    return [num1 + num2];  
+}
 
+function subNumbers(){
+   let num1 = parseInt(document.getElementById("operand1").value);
+	let num2 = parseInt(document.getElementById("operand2").value);
+    return [num1 - num2];  
+}
+
+function multNumbers(){
+   let num1 = parseInt(document.getElementById("operand1").value);
+	let num2 = parseInt(document.getElementById("operand2").value);
+    return [num1 * num2];  
+}
+
+function divNumbers(){
+   let num1 = parseInt(document.getElementById("operand1").value);
+	let num2 = parseInt(document.getElementById("operand2").value);
+    return [num1 / num2];  
+}
