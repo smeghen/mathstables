@@ -70,6 +70,8 @@ function validateInput() {
 }
 
 /*  Random number generator between 1 and 12. Display on game */
+/* For subtraction and division to work as per tables the number range has to be adjusted depending on user number choice otherwise questions not related to the maths
+tables will be displayed which ar out of the scope of the game  */
 document.getElementById("startgame").addEventListener("click", displayRandomNumber);
 function displayRandomNumber() {
     let choice = document.getElementById("selectedType");
@@ -79,10 +81,10 @@ function displayRandomNumber() {
     let firstNum = parseInt(Math.random() * 12) + 1;
     document.getElementById("operand1").textContent = firstNum;
 } else if(choice === "Subtraction"){
-    let firstNum = parseInt(random(substraction === numChoice/*array of numbers from subtraction tables*/));
+    let firstNum = parseInt(Math.random() * 12) + numChoice;  
     document.getElementById("operand1").textContent = firstNum;
 } else if(choice === "Division"){
-    let firstNum = parseInt(random(division === numChoice/*array of numbers from division tables*/));
+    let firstNum = parseInt(Math.random() * 12) * numChoice; 
     document.getElementById("operand1").textContent = firstNum;
 }
 }
