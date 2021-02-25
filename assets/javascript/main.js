@@ -74,10 +74,14 @@ function validateInput() {
 tables will be displayed which ar out of the scope of the game  */
 document.getElementById("startgame").addEventListener("click", displayRandomNumber);
 function displayRandomNumber() {
-    let choice = document.getElementById("selectedType");
-    let numChoice = document.getElementById("selectedNumber");
+    let choice = document.getElementById("gameType").value;
+    let numChoice = document.getElementById("tableNumber").value;
+    numChoice = Number(numChoice);
     
-    if (choice === "Addtion" || "Multiplication"){
+    if (choice === "Addtion"){
+    let firstNum = parseInt(Math.random() * 12) + 1;
+    document.getElementById("operand1").textContent = firstNum;
+} else if (choice === "Multiplication"){
     let firstNum = parseInt(Math.random() * 12) + 1;
     document.getElementById("operand1").textContent = firstNum;
 } else if(choice === "Subtraction"){
