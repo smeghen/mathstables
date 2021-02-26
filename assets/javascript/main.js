@@ -121,7 +121,7 @@ function divNumbers(){
 
 /* Function calls the different calculation functions depending on the user selection*/
 function runGame(){
- let game = document.getElementById("selectedType");
+ let game = document.getElementById("gameType").value;
   if (game === "Addition"){
      addNumbers();
   } else if (game === "Subtraction"){
@@ -131,4 +131,21 @@ function runGame(){
   } else if (game === "Division"){
       divNumbers();
   }
+}
+
+/* Function to check user answer against actual answer*/
+document.getElementById("enterguess").addEventListener("click", checkAnswer);
+function checkAnswer(){
+     let guess = parseInt(document.getElementById('guess').value);
+        guess = Number(guess);
+     let calculteAnswer = runGame();
+     let isCorrect = guess === calculatedAnswer;   
+
+     if (isCorrect) {
+        alert("Hey! You got it right! :D");
+        
+    } else {
+        alert(`Sorry the correct answer is ${calculatedAnswer}!`);
+        
+    }
 }
