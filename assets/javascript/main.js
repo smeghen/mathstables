@@ -78,7 +78,7 @@ function displayRandomNumber() {
     let numChoice = document.getElementById("tableNumber").value;
     numChoice = Number(numChoice);
     
-    if (choice === "Addtion"){
+    if (choice === "Addition"){
     let firstNum = parseInt(Math.random() * 12) + 1;
     document.getElementById("operand1").textContent = firstNum;
 } else if (choice === "Multiplication"){
@@ -94,43 +94,26 @@ function displayRandomNumber() {
 }
 
 
-/* Functions for calculations */
-function addNumbers() {
-    let num1 = parseInt(document.getElementById("operand1").value);
-	let num2 = parseInt(document.getElementById("operand2").value);
-    return [num1 + num2];  
-}
-
-function subNumbers(){
-   let num1 = parseInt(document.getElementById("operand1").value);
-	let num2 = parseInt(document.getElementById("operand2").value);
-    return [num1 - num2];  
-}
-
-function multNumbers(){
-   let num1 = parseInt(document.getElementById("operand1").value);
-	let num2 = parseInt(document.getElementById("operand2").value);
-    return [num1 * num2];  
-}
-
-function divNumbers(){
-   let num1 = parseInt(document.getElementById("operand1").value);
-	let num2 = parseInt(document.getElementById("operand2").value);
-    return [num1 / num2];  
-}
-
 /* Function calls the different calculation functions depending on the user selection*/
 function runGame(){
  let game = document.getElementById("gameType").value;
+ let num1 = parseInt(document.getElementById("operand1").textContent);
+ let num2 = parseInt(document.getElementById("operand2").textContent);
+   
   if (game === "Addition"){
-     addNumbers();
+     let answer = num1 + num2;
+    return answer;
   } else if (game === "Subtraction"){
-      subNumbers();
+      let answer = num1 - num2;
+      return answer;
   } else if (game === "Multiplication"){
-      multNumbers();
+      let answer = num1 * num2;
+      return answer;
   } else if (game === "Division"){
-      divNumbers();
+      let answer = num1 / num2;
+      return answer;
   }
+
 }
 
 /* Function to check user answer against actual answer*/
@@ -138,7 +121,7 @@ document.getElementById("enterguess").addEventListener("click", checkAnswer);
 function checkAnswer(){
      let guess = parseInt(document.getElementById('guess').value);
         guess = Number(guess);
-     let calculteAnswer = runGame();
+     let calculatedAnswer = runGame();
      let isCorrect = guess === calculatedAnswer;   
 
      if (isCorrect) {
