@@ -88,7 +88,13 @@ function displayRandomNumber() {
     let firstNum = parseInt(Math.random() * 12) + numChoice;  
     document.getElementById("operand1").textContent = firstNum;
 } else if(choice === "Division"){
-    let firstNum = parseInt(Math.random() * 12) * numChoice; 
+    let firstNum = parseInt(Math.random() * 12);
+    if(firstNum === 0) {
+        firstNum = numChoice;
+    }else {
+        firstNum = firstNum * numChoice; 
+    document.getElementById("operand1").textContent = firstNum;
+    }
     document.getElementById("operand1").textContent = firstNum;
 }
 }
