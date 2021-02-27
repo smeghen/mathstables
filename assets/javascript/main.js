@@ -4,23 +4,23 @@ function getGameType() {
     var gameType = document.getElementById("gameType");
     var type = gameType.options[gameType.selectedIndex].value;
     if (type === "Addition") {
-         document.getElementById("operand3").innerHTML = "+";
+        document.getElementById("operand3").innerHTML = "+";
     }
     else if (type === "Subtraction") {
-         document.getElementById("operand3").innerHTML = "-";
+        document.getElementById("operand3").innerHTML = "-";
     }
     else if (type === "Multiplication") {
-         document.getElementById("operand3").innerHTML = "x";
+        document.getElementById("operand3").innerHTML = "x";
     }
-    else if(type === "Division") {
-         document.getElementById("operand3").innerHTML = "/";
+    else if (type === "Division") {
+        document.getElementById("operand3").innerHTML = "/";
     }
 }
 /* Function takes the number selection from dropdown menu, and displays it on Game Modal*/
 function getTableNumber() {
     var tableNumber = document.getElementById("tableNumber");
     var number = tableNumber.options[tableNumber.selectedIndex].value;
-        document.getElementById("operand2").innerHTML = number;
+    document.getElementById("operand2").innerHTML = number;
 }
 
 
@@ -45,10 +45,10 @@ function validateInput() {
             var type = document.getElementById("type");
             var selection = document.getElementById("selection");
             var home = document.getElementById("home");
-        if (validatebutton.style.display === "none") {
+            if (validatebutton.style.display === "none") {
                 validatebutton.style.display = "block";
                 type.style.display = "block";
-                home.style.display = "block";      
+                home.style.display = "block";
             } else {
                 validatebutton.style.display = "none";
                 type.style.display = "none";
@@ -77,69 +77,69 @@ function displayRandomNumber() {
     let choice = document.getElementById("gameType").value;
     let numChoice = document.getElementById("tableNumber").value;
     numChoice = Number(numChoice);
-    
-    if (choice === "Addition"){
-    let firstNum = parseInt(Math.random() * 12) + 1;
-    document.getElementById("operand1").textContent = firstNum;
-} else if (choice === "Multiplication"){
-    let firstNum = parseInt(Math.random() * 12) + 1;
-    document.getElementById("operand1").textContent = firstNum;
-} else if(choice === "Subtraction"){
-    let firstNum = parseInt(Math.random() * 12) + numChoice;  
-    document.getElementById("operand1").textContent = firstNum;
-} else if(choice === "Division"){
-    let firstNum = parseInt(Math.random() * 12);
-    if(firstNum === 0) {
-        firstNum = numChoice;
-    }else {
-        firstNum = firstNum * numChoice; 
-    document.getElementById("operand1").textContent = firstNum;
+
+    if (choice === "Addition") {
+        let firstNum = parseInt(Math.random() * 12) + 1;
+        document.getElementById("operand1").textContent = firstNum;
+    } else if (choice === "Multiplication") {
+        let firstNum = parseInt(Math.random() * 12) + 1;
+        document.getElementById("operand1").textContent = firstNum;
+    } else if (choice === "Subtraction") {
+        let firstNum = parseInt(Math.random() * 12) + numChoice;
+        document.getElementById("operand1").textContent = firstNum;
+    } else if (choice === "Division") {
+        let firstNum = parseInt(Math.random() * 12);
+        if (firstNum === 0) {
+            firstNum = numChoice;
+        } else {
+            firstNum = firstNum * numChoice;
+            document.getElementById("operand1").textContent = firstNum;
+        }
+        document.getElementById("operand1").textContent = firstNum;
     }
-    document.getElementById("operand1").textContent = firstNum;
-}
 }
 
 
 /* Function calls the different calculation functions depending on the user selection*/
-function runGame(){
- let game = document.getElementById("gameType").value;
- let num1 = parseInt(document.getElementById("operand1").textContent);
- let num2 = parseInt(document.getElementById("operand2").textContent);
-   
-  if (game === "Addition"){
-     let answer = num1 + num2;
-    return answer;
-  } else if (game === "Subtraction"){
-      let answer = num1 - num2;
-      return answer;
-  } else if (game === "Multiplication"){
-      let answer = num1 * num2;
-      return answer;
-  } else if (game === "Division"){
-      let answer = num1 / num2;
-      return answer;
-  }
+function runGame() {
+    let game = document.getElementById("gameType").value;
+    let num1 = parseInt(document.getElementById("operand1").textContent);
+    let num2 = parseInt(document.getElementById("operand2").textContent);
+
+    if (game === "Addition") {
+        let answer = num1 + num2;
+        return answer;
+    } else if (game === "Subtraction") {
+        let answer = num1 - num2;
+        return answer;
+    } else if (game === "Multiplication") {
+        let answer = num1 * num2;
+        return answer;
+    } else if (game === "Division") {
+        let answer = num1 / num2;
+        return answer;
+    }
 
 }
 
 /* Function to check user answer against actual answer*/
 document.getElementById("enterguess").addEventListener("click", checkAnswer);
-function checkAnswer(){
-     let guess = parseInt(document.getElementById('guess').value);
-     if(isNaN(guess)){
-         alert("Your answer is not a number! Please enter again!")
+function checkAnswer() {
+    let guess = parseInt(document.getElementById('guess').value);
+    if (isNaN(guess)) {
+        alert("Your answer is not a number! Please enter again!")
 
-     }
-    else { 
-     let calculatedAnswer = runGame();
-     let isCorrect = guess === calculatedAnswer;   
-
-     if (isCorrect) {
-        alert("Hey! You got it right! :D");
-        
-    } else {
-        alert(`Sorry the correct answer is ${calculatedAnswer}!`);
-        
     }
-}
+    else {
+        let calculatedAnswer = runGame();
+        let isCorrect = guess === calculatedAnswer;
+
+        if (isCorrect) {
+            alert("Hey! You got it right! :D");
+
+        } else {
+            alert(`Sorry the correct answer is ${calculatedAnswer}!`);
+
+        }
+    }
 }

@@ -132,6 +132,62 @@ To run the code locally:
 ---
 # Issues Encountered
 
+* Came across a problem with my displayRandomNumber() function: 
+
+
+ 
+
+function displayRandomNumber() { 
+
+    let choice = document.getElementById("selectedType"); 
+
+    let numChoice = document.getElementById("selectedNumber");  
+
+    if (choice === "Addtion" || "Multiplication"){ 
+
+    let firstNum = parseInt(Math.random() * 12) + 1; 
+
+    document.getElementById("operand1").textContent = firstNum; 
+
+    } else if(choice === "Subtraction"){ 
+
+    let firstNum = parseInt(Math.random() * 12) + numChoice;   
+
+    document.getElementById("operand1").textContent = firstNum; 
+
+    } else if(choice === "Division"){ 
+
+    let firstNum = parseInt(Math.random() * 12) * numChoice;  
+
+    document.getElementById("operand1").textContent = firstNum; 
+
+    } 
+
+    }  
+
+The first if statement was being confirmed true for all selections and returning the random number range of 1 to 12. Using chrome dev tools I was able to find that the variable of choice was not being defined correctly so it could not be used correctly in the if else statement. This was fixed by changing the variable declaration to: 
+
+ 
+
+    let choice = document.getElementById("selectedType").value; 
+
+Another issue with this function was the variable numChoice, when checking on devtools, found that it was a string and would not then work in the formula. This was overcome by converting it to a number using the function Number(). 
+
+
+
+ 
+
+ Encountered an issue with the Subtraction equations. During some testing found that the random number generation would throw out a 0 from time to time. As you can’t divide 0 by a number and it is not part of the division tables this is technically an error in the game. I figured out that the problem was with my formula: 
+
+    if(choice === "Division"){ 
+
+    let firstNum = parseInt(Math.random() * 12) * numChoice;  
+
+    document.getElementById("operand1").textContent = firstNum; 
+
+    } 
+
+This formula allows 0 to be picked and multiplying 0 by the numChoice will still return 0. Overcame this issue by adding a check on the random number being provided. If it is 0, the numChoice as the random number, which is the equivalent to adding 1 to the random number, as done for the other equations to keep the number range from 1 to 12. 
 
 ---
 
