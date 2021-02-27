@@ -120,7 +120,11 @@ function runGame(){
 document.getElementById("enterguess").addEventListener("click", checkAnswer);
 function checkAnswer(){
      let guess = parseInt(document.getElementById('guess').value);
-        guess = Number(guess);
+     if(isNaN(guess)){
+         alert("Your answer is not a number! Please enter again!")
+
+     }
+    else { 
      let calculatedAnswer = runGame();
      let isCorrect = guess === calculatedAnswer;   
 
@@ -131,4 +135,5 @@ function checkAnswer(){
         alert(`Sorry the correct answer is ${calculatedAnswer}!`);
         
     }
+}
 }
