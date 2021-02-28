@@ -145,6 +145,7 @@ function checkAnswer() {
     }
     /* Clear user guess from input box  */
     document.getElementById('guess').value = '';
+    displayRandomNumber();
 }
 
 function displayScore() {
