@@ -69,12 +69,12 @@ body {
  
 }
 
-.letsgo{
-   margin-left: 45%;
-}
-
 /*----- Game -------  */
 
+#endgame{
+  display: none; 
+  align-items: flex-start;
+}
 
 .game-text{
     font-size: 5em;

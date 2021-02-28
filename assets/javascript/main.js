@@ -39,7 +39,7 @@ function validateInput() {
     }
     else {
         /*Code found on w3schools to hide elements on click. Modified to hide items after inputs have been validated (https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp) */
-        function hideStart() {
+        function hideSelect() {
             var validatebutton = document.getElementById("validate");
             var letsgobutton = document.getElementById("letsgo");
             var type = document.getElementById("type");
@@ -59,11 +59,11 @@ function validateInput() {
                 selection.style.display = "none";
             }
             else {
-                letsgobutton.style.display = "block";
+                letsgobutton.style.display = "inline-block";
                 selection.style.display = "block";
             }
         }
-        hideStart();
+        hideSelect();
         document.getElementById("selectedType").innerHTML = type;
         document.getElementById("selectedNumber").innerHTML = number;
     }
@@ -146,9 +146,29 @@ function checkAnswer() {
     /* Clear user guess from input box  */
     document.getElementById('guess').value = '';
     displayRandomNumber();
+    
 }
 
 function displayScore() {
     let score = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++score;
+}
+
+function hideStart() {
+    var startbutton = document.getElementById("startgame");
+    var endgamebutton = document.getElementById("endgame");
+
+    if (startbutton.style.display === "none") {
+        startbutton.style.display = "block";
+    }
+    else {
+        startbutton.style.display = "none";
+    }
+    if (endgamebutton.style.display === "block") {
+        endgamebutton.style.display = "none";
+
+    }
+    else {
+        endgamebutton.style.display = "inline-block";
+    }
 }
