@@ -143,9 +143,11 @@ function checkAnswer() {
 
         }
     }
+    /* Clear user guess from input box  */
+    document.getElementById('guess').value = '';
 }
 
-function displayScore(){
+function displayScore() {
     let score = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++score;
 }
