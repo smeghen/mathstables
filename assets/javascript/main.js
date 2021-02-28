@@ -135,6 +135,7 @@ function checkAnswer() {
         let isCorrect = guess === calculatedAnswer;
 
         if (isCorrect) {
+            displayScore();
             alert("Hey! You got it right! :D");
 
         } else {
@@ -142,4 +143,9 @@ function checkAnswer() {
 
         }
     }
+}
+
+function displayScore(){
+    let score = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++score;
 }
