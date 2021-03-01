@@ -172,3 +172,5 @@ function hideStart() {
         endgamebutton.style.display = "inline-block";
     }
 }
+
+
