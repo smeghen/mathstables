@@ -136,9 +136,12 @@ function checkAnswer() {
 
         if (isCorrect) {
             displayScore();
-            alert("Hey! You got it right! :D");
+            correctSound();
+            document.getElementById('guess').value = '';
+    displayRandomNumber();
 
         } else {
+            wrongSound();
             alert(`Sorry the correct answer is ${calculatedAnswer}!`);
 
         }
@@ -173,4 +176,14 @@ function hideStart() {
     }
 }
 
+function wrongSound(){
+    audio = new Audio("assets/sounds/wrong.mp3");
+    audio.play();
+    
+}
 
+function correctSound(){
+    audio = new Audio("assets/sounds/correct.mp3");
+    audio.play();
+    
+}

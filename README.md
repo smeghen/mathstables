@@ -193,6 +193,8 @@ This formula allows 0 to be picked and multiplying 0 by the numChoice will still
 
 # Credits
 
+Sounds downloaded from https://bigsoundbank.com/
+
 
 
 ---
