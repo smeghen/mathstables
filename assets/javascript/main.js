@@ -148,6 +148,7 @@ function checkAnswer() {
     }
     /* Clear user guess from input box  */
     document.getElementById('guess').value = '';
+    document.getElementById('guess').focus();
     displayRandomNumber();
     
 }
@@ -174,6 +175,7 @@ function hideStart() {
     else {
         endgamebutton.style.display = "inline-block";
     }
+    document.getElementById('guess').focus();
 }
 
 function wrongSound(){
