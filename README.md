@@ -195,7 +195,15 @@ This formula allows 0 to be picked and multiplying 0 by the numChoice will still
 
 Sounds downloaded from https://bigsoundbank.com/
 
+Code for taking input when either enter key or button click is used. https://www.tutorialspoint.com/how-to-trigger-a-button-click-on-keyboard-enter-with-javascript
 
+Code to hide elements on click found on w3schools. https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+
+Code for validating dropdown menu selection found on Stackoverflow. https://stackoverflow.com/questions/15371162/javascript-dropdown-validation-and-alert 
+
+Code found to get inputs from dropdown menu.  https://mkyong.com/javascript/javascript-get-selected-value-from-dropdown-list/
+
+Background Image for site was a photo by Magda Ehlers taken from Pexels. https://www.pexels.com/photo/blue-red-and-yellow-stripe-surface-1329297/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels
 
 ---
 
