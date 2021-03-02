@@ -122,8 +122,17 @@ function runGame() {
 
 }
 
-/* Function to check user answer against actual answer*/
-document.getElementById("enterguess").addEventListener("click", checkAnswer);
+/* Code for taking enter or button click to trigger take the guess from input field. Code found on www.tutorialspoint.com and modified.
+https://www.tutorialspoint.com/how-to-trigger-a-button-click-on-keyboard-enter-with-javascript */
+var inputText = document.getElementById("guess");
+   inputText.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+         event.preventDefault();
+         document.getElementById("enterguess").click();
+      }
+   });
+
+ /* Function to check user answer against actual answer*/  
 function checkAnswer() {
     let guess = parseInt(document.getElementById('guess').value);
     if (isNaN(guess)) {
