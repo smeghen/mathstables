@@ -66,8 +66,11 @@ body {
  
 #letsgo{
     display: none;
- 
 }
+
+.dropdown-text{
+        font-size: 1rem;
+    }
 
 /*----- Game -------  */
 
@@ -97,4 +100,7 @@ body {
     .game-text{
     font-size: 3.5em;
 }
+    .dropdown-text{
+        font-size: 0.69rem;
+    }
 }
