@@ -63,19 +63,21 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Maths Tables is a game for learning and practicing the Addition, Subtraction, Multiplication and
-                        Division tables,
-                        that are taught as the foundation of mathematics in schools.</p>
+                        <p>Maths Tables is a game for learning and practicing the Addition, Subtraction, Multiplication
+                            and
+                            Division tables,
+                            that are taught as the foundation of mathematics in schools.</p>
 
                         <p>The game works by first selecting the equation type: Addition, Subtraction, Multiplication or
-                        Division.</p>
+                            Division.</p>
 
                         <p>Next select the table number you want to use: 1 to 12.</p>
 
-                        <p>The game will then select random questions based on your selection and test to see how well you
-                        know your tables.</p>
+                        <p>The game will then select random questions based on your selection and test to see how well
+                            you
+                            know your tables.</p>
 
-                       <p>Best of luck and enjoy.</p>
+                        <p>Best of luck and enjoy.</p>
 
                     </div>
                     <div class="container-fluid text-center">
@@ -99,7 +101,8 @@
                 <div class="modal-content text-center modal-bg">
                     <div class="container-fluid text-center">
                         <h1 class="modal-title" id="gameselectModalLabel">Games</h1>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            onclick="document.location.reload(true)">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -147,9 +150,12 @@
                     </div>
 
                     <div class="container-fluid text-center">
-                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal" id="home">Home</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal"
+                            id="home">Home</button>
                         <button type="button" class="btn btn-danger btn-lg" id="validate"
                             onclick="validateInput()">Select</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal" id="back"
+                            onclick="document.location.reload(true)">Back</button>
                         <button type="button" class="btn btn-danger btn-lg" id="letsgo"
                             onclick="getTableNumber();getGameType()" data-toggle="modal" data-dismiss="modal"
                             data-target="#gameModal">Let's

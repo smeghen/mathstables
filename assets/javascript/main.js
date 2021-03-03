@@ -45,6 +45,7 @@ function validateInput() {
             var type = document.getElementById("type");
             var selection = document.getElementById("selection");
             var home = document.getElementById("home");
+            var backbutton = document.getElementById("back");
             if (validatebutton.style.display === "none") {
                 validatebutton.style.display = "block";
                 type.style.display = "block";
@@ -57,10 +58,12 @@ function validateInput() {
             if (letsgobutton.style.display === "block") {
                 letsgobutton.style.display = "none";
                 selection.style.display = "none";
+                backbutton.style.display = "none";
             }
             else {
                 letsgobutton.style.display = "inline-block";
                 selection.style.display = "block";
+                backbutton.style.display = "inline-block";
             }
         }
         hideSelect();
