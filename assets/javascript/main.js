@@ -153,6 +153,7 @@ function checkAnswer() {
         } else {
             wrongSound();
             alert(`Sorry the correct answer is ${calculatedAnswer}!`);
+             document.getElementById('guess').value = '';
 
         }
     }
