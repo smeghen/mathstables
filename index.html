@@ -63,18 +63,20 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sed ducimus sint ipsa minima
-                        tempora asperiores dicta, deserunt ut similique, vitae eum iste voluptas tenetur illo nihil
-                        quam. Est, culpa?
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, maxime labore, quaerat
-                        natus nemo quibusdam nihil similique voluptate autem magni eligendi? Reiciendis, ullam possimus
-                        cum corporis nemo facere quas molestias.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laudantium blanditiis quis
-                        aperiam rem aspernatur dolorem nostrum voluptatum minima? Nesciunt quas qui provident a itaque
-                        repudiandae distinctio eveniet harum maiores?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, quaerat. Debitis similique
-                        eveniet voluptas explicabo illo dolor autem unde in. Expedita iure repellendus recusandae
-                        obcaecati maiores illo laboriosam delectus fuga!
+                        <p>Maths Tables is a game for learning and practicing the Addition, Subtraction, Multiplication and
+                        Division tables,
+                        that are taught as the foundation of mathematics in schools.</p>
+
+                        <p>The game works by first selecting the equation type: Addition, Subtraction, Multiplication or
+                        Division.</p>
+
+                        <p>Next select the table number you want to use: 1 to 12.</p>
+
+                        <p>The game will then select random questions based on your selection and test to see how well you
+                        know your tables.</p>
+
+                       <p>Best of luck and enjoy.</p>
+
                     </div>
                     <div class="container-fluid text-center">
                         <button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Home</button>
@@ -164,18 +166,21 @@
 
     <!-- Game Modal -->
     <section>
-        <div class="modal fade " id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal fade " id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true"
+            data-backdrop="static">
             <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content text-center modal-bg">
                     <div class="container-fluid text-center">
                         <h1 class="modal-title" id="gameModalLabel">Game</h1>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="document.location.reload(true)">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            onclick="document.location.reload(true)">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <div class="modal-body d-flex justify-content-center">
 
                         </div>
-                        <h4>Score: <p id="score">0</p></h4>
+                        <h4>Score: <p id="score">0</p>
+                        </h4>
                         <div class="card-body">
                             <div class="card-text game-text">
                                 <div class="d-inline-block" id="operand1">?</div>
@@ -183,10 +188,13 @@
                                 <div class="d-inline-block" id="operand2"></div>
                                 <div class="d-inline-block" id="equal">=</div>
                                 <input class="col-sm-4 rounded" type="text" id="guess">
-                                <div><button class="btn btn-info btn-lg" id="startgame" onclick="hideStart()">Start</button>
-                                    <button class="btn btn-info btn-lg" id="endgame" onclick="document.location.reload(true)">End Game</button>
-                                    <button class="btn btn-danger btn-lg" id="enterguess" onclick="checkAnswer()">Enter</button>
-                                 </div>    
+                                <div><button class="btn btn-info btn-lg" id="startgame"
+                                        onclick="hideStart()">Start</button>
+                                    <button class="btn btn-info btn-lg" id="endgame"
+                                        onclick="document.location.reload(true)">End Game</button>
+                                    <button class="btn btn-danger btn-lg" id="enterguess"
+                                        onclick="checkAnswer()">Enter</button>
+                                </div>
                             </div>
                         </div>
                     </div>
