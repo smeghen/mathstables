@@ -32,9 +32,10 @@ function validateInput() {
     var type = gameType.options[gameType.selectedIndex].value;
     var tableNumber = document.getElementById("tableNumber");
     var number = tableNumber.options[tableNumber.selectedIndex].value;
+    
     if (type === "Choose a Game to Play" ||
         number === "Choose the tables for the Game") {
-        alert("Selections not made correctly.");
+        $("#warningModal").modal("show");
         return false;
     }
     else {
