@@ -208,6 +208,8 @@ Code for calling a Modal to open using JavaScript. https://stackoverflow.com/que
 
 Background Image for site was a photo by Magda Ehlers taken from Pexels. https://www.pexels.com/photo/blue-red-and-yellow-stripe-surface-1329297/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels
 
+Input type and pattern for keypad display on small screens found at creativeblog.com. https://www.creativebloq.com/html5/12-html5-tricks-mobile-81412803
+
 ---
 
 # Acknowledgments
