@@ -187,7 +187,8 @@ Another issue with this function was the variable numChoice, when checking on de
 
     } 
 
-This formula allows 0 to be picked and multiplying 0 by the numChoice will still return 0. Overcame this issue by adding a check on the random number being provided. If it is 0, the numChoice as the random number, which is the equivalent to adding 1 to the random number, as done for the other equations to keep the number range from 1 to 12. 
+This formula allows 0 to be picked and multiplying 0 by the numChoice will still return 0. Overcame this issue by adding a check on the random number being provided.
+ If it is 0, the numChoice is the random number, which is the equivalent to adding 1 to the random number, as done for the other equations to keep the number range from 1 to 12. 
 
 ---
 
