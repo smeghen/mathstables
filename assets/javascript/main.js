@@ -35,6 +35,7 @@ function validateInput() {
 
     if (type === "Choose a Game to Play" ||
         number === "Choose the tables for the Game") {
+            errorSound();
             /* Code for calling a modal to open without using a button was found on Stackoerflow. https://stackoverflow.com/questions/36672304/bootstrap-mymodal-modalshow-is-not-working */
         $("#warningModal").modal("show");
         return false;
@@ -142,6 +143,7 @@ inputText.addEventListener("keyup", function (event) {
 function checkAnswer() {
     let guess = parseInt(document.getElementById('guess').value);
     if (isNaN(guess)) {
+        errorSound();
         $("#inputErrorModal").modal("show");
 
     }
@@ -203,6 +205,12 @@ function wrongSound() {
 
 function correctSound() {
     audio = new Audio("assets/sounds/correct.mp3");
+    audio.play();
+
+}
+
+function errorSound() {
+    audio = new Audio("assets/sounds/Error.mp3");
     audio.play();
 
 }
