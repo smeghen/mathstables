@@ -157,7 +157,7 @@
                         <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal" id="back"
                             onclick="document.location.reload(true)">Back</button>
                         <button type="button" class="btn btn-danger btn-lg" id="letsgo"
-                            onclick="getTableNumber();getGameType()" data-toggle="modal" data-dismiss="modal"
+                            onclick="getTableNumber();getGameType();displayRandomNumber()" data-toggle="modal" data-dismiss="modal"
                             data-target="#gameModal">Let's
                             Go</button>
 
@@ -195,8 +195,7 @@
                                 <div class="d-inline-block" id="equal">=</div>
                                 <!-- Input type and pattern for keypad display on small screens found at https://www.creativebloq.com/html5/12-html5-tricks-mobile-81412803 -->
                                 <input class="col-sm-4 rounded" id="guess" type="number" pattern="[0-9]*">
-                                <div><button class="btn btn-primary btn-lg" id="startgame"
-                                        onclick="hideStart()">Start</button>
+                                <div>
                                     <button class="btn btn-primary btn-lg" id="endgame"
                                         onclick="document.location.reload(true)">End Game</button>
                                     <button class="btn btn-danger btn-lg" id="enterguess"

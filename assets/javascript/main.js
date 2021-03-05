@@ -78,7 +78,7 @@ function validateInput() {
 /*  Random number generator between 1 and 12. Display on game */
 /* For subtraction and division to work as per tables the number range has to be adjusted depending on user number choice otherwise questions not related to the maths
 tables will be displayed which ar out of the scope of the game  */
-document.getElementById("startgame").addEventListener("click", displayRandomNumber);
+
 function displayRandomNumber() {
     let choice = document.getElementById("gameType").value;
     let numChoice = document.getElementById("tableNumber").value;
@@ -161,13 +161,14 @@ function checkAnswer() {
             wrongSound();
             document.getElementById("answer").textContent = calculatedAnswer;
             $("#incorrectAnswerModal").modal("show");
-            document.getElementById('guess').value = '';
+            
 
         }
     }
     /* Clear user guess from input box  */
    
     document.getElementById('guess').focus();
+    document.getElementById('guess').value = '';
     displayRandomNumber();
 
 }

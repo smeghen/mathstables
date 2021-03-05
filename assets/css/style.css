@@ -79,7 +79,6 @@ body {
 /*----- Game -------  */
 
 #endgame{
-  display: none; 
   align-items: flex-start;
 }
 
