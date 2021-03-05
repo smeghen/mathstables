@@ -32,9 +32,10 @@ function validateInput() {
     var type = gameType.options[gameType.selectedIndex].value;
     var tableNumber = document.getElementById("tableNumber");
     var number = tableNumber.options[tableNumber.selectedIndex].value;
-    
+
     if (type === "Choose a Game to Play" ||
         number === "Choose the tables for the Game") {
+            /* Code for calling a modal to open without using a button was found on Stackoerflow. https://stackoverflow.com/questions/36672304/bootstrap-mymodal-modalshow-is-not-working */
         $("#warningModal").modal("show");
         return false;
     }
@@ -129,12 +130,12 @@ function runGame() {
 /* Code for taking enter or button click to trigger take the guess from input field. Code found on www.tutorialspoint.com and modified.
 https://www.tutorialspoint.com/how-to-trigger-a-button-click-on-keyboard-enter-with-javascript */
 var inputText = document.getElementById("guess");
-   inputText.addEventListener("keyup", function(event) {
-      if (event.keyCode === 13) {
-         event.preventDefault();
-         document.getElementById("enterguess").click();
-      }
-   });
+inputText.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("enterguess").click();
+    }
+});
 
 /* Function to check user answer against actual answer*/
 
@@ -152,12 +153,12 @@ function checkAnswer() {
             displayScore();
             correctSound();
             document.getElementById('guess').value = '';
-    displayRandomNumber();
+            displayRandomNumber();
 
         } else {
             wrongSound();
             alert(`Sorry the correct answer is ${calculatedAnswer}!`);
-             document.getElementById('guess').value = '';
+            document.getElementById('guess').value = '';
 
         }
     }
@@ -165,7 +166,7 @@ function checkAnswer() {
     document.getElementById('guess').value = '';
     document.getElementById('guess').focus();
     displayRandomNumber();
-    
+
 }
 
 function displayScore() {
@@ -193,14 +194,14 @@ function hideStart() {
     document.getElementById('guess').focus();
 }
 
-function wrongSound(){
+function wrongSound() {
     audio = new Audio("assets/sounds/wrong.mp3");
     audio.play();
-    
+
 }
 
-function correctSound(){
+function correctSound() {
     audio = new Audio("assets/sounds/correct.mp3");
     audio.play();
-    
+
 }

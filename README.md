@@ -203,6 +203,8 @@ Code for validating dropdown menu selection found on Stackoverflow. https://stac
 
 Code found to get inputs from dropdown menu.  https://mkyong.com/javascript/javascript-get-selected-value-from-dropdown-list/
 
+Code for calling a Modal to open using JavaScript. https://stackoverflow.com/questions/36672304/bootstrap-mymodal-modalshow-is-not-working
+
 Background Image for site was a photo by Magda Ehlers taken from Pexels. https://www.pexels.com/photo/blue-red-and-yellow-stripe-surface-1329297/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels
 
 ---
