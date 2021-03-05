@@ -142,7 +142,7 @@ inputText.addEventListener("keyup", function (event) {
 function checkAnswer() {
     let guess = parseInt(document.getElementById('guess').value);
     if (isNaN(guess)) {
-        alert("Your answer is not a number! Please enter again!")
+        $("#inputErrorModal").modal("show");
 
     }
     else {

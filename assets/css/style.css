@@ -90,8 +90,9 @@ body {
 /*----- Warning Modal -------  */
 
 .modal-bg-warning{
-    background-color: rgba(240, 14, 14, 0.95);
-    font-size: 1rem;
+    color: red;
+    background-color: rgba(250, 243, 245, 0.95);
+    font-size: 1.2rem;
 }
 
 
