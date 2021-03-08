@@ -20,6 +20,9 @@ the 1 to 12 tables that are taught in schools, a selection of which
 number and type of arithmetic can be made with the game then provides 
 questions based on the selection. 
 
+ The live website can be found here: https://smeghen.github.io/mathstables/
+
+
 ---
 ### User Experience (UX)
 
@@ -68,7 +71,9 @@ Here is the wireframes that I used as the basis of the design
 for the site. These were created using Balsamiq.
 
 
+![Wireframe mockup](assets/images/wireframe.png "Wireframe mockup")
 
+ For the pfd version of the wireframes click [here.](https://github.com/smeghen/shannongaelslgfa/blob/master/assets/images/wireframe.pdf)
  
 
 ### Differences to Design

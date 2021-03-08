@@ -13,7 +13,7 @@ function getGameType() {
         document.getElementById("operand3").innerHTML = "x";
     }
     else if (type === "Division") {
-        document.getElementById("operand3").innerHTML = "/";
+        document.getElementById("operand3").innerHTML = "÷";
     }
 }
 /* Function takes the number selection from dropdown menu, and displays it on Game Modal*/
