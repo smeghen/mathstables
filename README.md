@@ -6,6 +6,7 @@
 
 This site was designed for the second milestone project in Full Stack Software Development with the Code Institute, based on the learnings from HTML, CSS and User Centric Design,  JavaScript Fundamentals and Interactive Frontend Development modules.
 
+![Site mockup](assets/images/mockup.png "Site mockup")
 ---
 
 ## Maths Tables
@@ -73,7 +74,7 @@ for the site. These were created using Balsamiq.
 
 ![Wireframe mockup](assets/images/wireframe.png "Wireframe mockup")
 
- For the pfd version of the wireframes click [here.](https://github.com/smeghen/shannongaelslgfa/blob/master/assets/images/wireframe.pdf)
+ For the pfd version of the wireframes click [here.](https://github.com/smeghen/mathstables/blob/master/assets/images/wireframe.pdf)
  
 
 ### Differences to Design
