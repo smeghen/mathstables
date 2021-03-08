@@ -115,7 +115,7 @@ being accepted as valid entry and returning a incorrect answer. This was rectifi
 so only numbers can be accepted in the guess box.
 
 Another observation from a tester was on smaller screens it would be easier to use if the keypad for input to default to number keypad, I found the solution
-on creativeblog.com. By setting the <input pattern="[0-9]*"> this will cover both android and iOS.
+on creativeblog.com. By setting the input pattern="[0-9]*" this will cover both android and iOS.
 
 --- 
 
@@ -213,6 +213,8 @@ This formula allows 0 to be picked and multiplying 0 by the numChoice will still
 ---
 
 # Credits
+
+Used Am I Responsive? website to get mockup image of site on various devices. http://ami.responsivedesign.is/?ref=producthunt
 
 Sounds downloaded from https://bigsoundbank.com/
 
