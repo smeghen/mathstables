@@ -23,20 +23,10 @@
                     <img src="assets/images/mathsgameslogo.png" class="d-inline-block logo" alt="Maths Games logo"
                         loading="lazy">
                 </a>
-                <ul class="navbar-nav flex-row">
-                    <a class="nav-link" href="#info">
-                        <img src="assets/images/infologo.png" class="d-inline-block logo" alt="Info logo"
-                            loading="lazy">
-                    </a>
-                    <a class="nav-link" href="#games">
-                        <img src="assets/images/gameslogo.png" class="d-inline-block logo" alt="Games logo"
-                            loading="lazy">
-                    </a>
-                </ul>
             </nav>
         </div>
-        <!-- End Navigation Bar  -->
     </header>
+    <!-- End Navigation Bar  -->
 
     <!-- Hero Image-->
     <section>
@@ -47,7 +37,7 @@
                     <h4 class="jumbo-text jumbo-color">Games to help you learn the 1 to 12 tables
                         for addition, subtraction, multiplication
                         and division.</h4>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#infoModal">
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#infoModal">
                         Info
                     </button>
                     <button type="button" class="btn btn-danger btn-lg" data-toggle="modal"
@@ -73,21 +63,24 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sed ducimus sint ipsa minima
-                        tempora asperiores dicta, deserunt ut similique, vitae eum iste voluptas tenetur illo nihil
-                        quam. Est, culpa?
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, maxime labore, quaerat
-                        natus nemo quibusdam nihil similique voluptate autem magni eligendi? Reiciendis, ullam possimus
-                        cum corporis nemo facere quas molestias.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laudantium blanditiis quis
-                        aperiam rem aspernatur dolorem nostrum voluptatum minima? Nesciunt quas qui provident a itaque
-                        repudiandae distinctio eveniet harum maiores?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, quaerat. Debitis similique
-                        eveniet voluptas explicabo illo dolor autem unde in. Expedita iure repellendus recusandae
-                        obcaecati maiores illo laboriosam delectus fuga!
+                        <p>Maths Tables is a game for learning and practicing the Addition, Subtraction, Multiplication
+                            and
+                            Division tables,
+                            that are taught as the foundation of mathematics in schools.</p>
+
+                        <p>The game works by first selecting the equation type: Addition, Subtraction, Multiplication or
+                            Division.</p>
+
+                        <p>Next select the table number you want to use: 1 to 12.</p>
+
+                        <p>The game will then select random questions based on your selection and test to see how well
+                            you
+                            know your tables.</p>
+
+                        <p>Best of luck and enjoy.</p>
                     </div>
                     <div class="container-fluid text-center">
-                        <button type="button" class="btn btn-info btn-lg" data-dismiss="modal">Home</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Home</button>
                         <button type="button" id="infogames" class="btn btn-danger btn-lg" data-toggle="modal"
                             data-dismiss="modal" data-target="#gameselectModal">
                             Games
@@ -107,7 +100,8 @@
                 <div class="modal-content text-center modal-bg">
                     <div class="container-fluid text-center">
                         <h1 class="modal-title" id="gameselectModalLabel">Games</h1>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            onclick="document.location.reload(true)">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -120,7 +114,7 @@
                         <div class="d-inline-block" id="selectedNumber"></div>
                     </div>
                     <div id="type" class="container-fluid text-center">
-                        <div class="modal-body d-flex justify-content-evenly">
+                        <div class="modal-body d-flex justify-content-evenly dropdown-text">
                             <div class="input-group input-group-lg">
                                 <label class="input-group-text" for="gameType">Game Types</label>
                                 <select class="form-select" id="gameType">
@@ -132,11 +126,10 @@
                                 </select>
                             </div>
 
-
                             <div class="input-group input-group-lg" id="table">
                                 <label class="input-group-text" for="tableNumber">Tables</label>
                                 <select class="form-select" id="tableNumber">
-                                    <option selected>Choose the tables for the Game</option>
+                                    <option selected>Choose the tables</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -155,59 +148,117 @@
                     </div>
 
                     <div class="container-fluid text-center">
-                        <button type="button" class="btn btn-info btn-lg" data-dismiss="modal" id="home">Home</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal"
+                            id="home">Home</button>
                         <button type="button" class="btn btn-danger btn-lg" id="validate"
                             onclick="validateInput()">Select</button>
+                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal" id="back"
+                            onclick="document.location.reload(true)">Back</button>
                         <button type="button" class="btn btn-danger btn-lg" id="letsgo"
-                            onclick="getTableNumber();getGameType()" data-toggle="modal" data-dismiss="modal"
-                            data-target="#gameModal">Let's
+                            onclick="getTableNumber();getGameType();displayRandomNumber()" data-toggle="modal"
+                            data-dismiss="modal" data-target="#gameModal">Let's
                             Go</button>
-
                     </div>
                 </div>
             </div>
         </div>
-
-
     </section>
     <!-- End Games Select Modal -->
 
     <!-- Game Modal -->
     <section>
-        <div class="modal fade " id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal fade " id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true"
+            data-backdrop="static">
             <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content text-center modal-bg">
                     <div class="container-fluid text-center">
                         <h1 class="modal-title" id="gameModalLabel">Game</h1>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            onclick="document.location.reload(true)">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <div class="modal-body d-flex justify-content-center">
-
                         </div>
-                        <h4>Score: <p id="score">0</p></h4>
+                        <h4>Score: <p id="score">0</p>
+                        </h4>
                         <div class="card-body">
                             <div class="card-text game-text">
                                 <div class="d-inline-block" id="operand1">?</div>
                                 <div class="d-inline-block" id="operand3"></div>
                                 <div class="d-inline-block" id="operand2"></div>
                                 <div class="d-inline-block" id="equal">=</div>
-                                <input class="col-sm-4 rounded" type="text" id="guess">
-                                <div><button class="btn btn-info btn-lg" id="startgame" onclick="hideStart()">Start</button>
-                                    <button class="btn btn-info btn-lg" id="endgame" onclick="index.html">End Game</button> 
-                                    <button class="btn btn-danger btn-lg" id="enterguess" onclick="checkAnswer()">Enter</button>
-                                 </div>    
+                                <!-- Input type and pattern for keypad display on small screens found at https://www.creativebloq.com/html5/12-html5-tricks-mobile-81412803 -->
+                                <input class="col-sm-4 rounded" id="guess" type="number" pattern="[0-9]*">
+                                <div>
+                                    <button class="btn btn-primary btn-lg" id="endgame"
+                                        onclick="document.location.reload(true)">End Game</button>
+                                    <button class="btn btn-danger btn-lg" id="enterguess"
+                                        onclick="checkAnswer()">Enter</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
+    <!-- End Game Modal -->
 
+    <!-- Warning Modal -->
+    <section>
+        <div class="modal fade " id="warningModal" tabindex="-1" aria-labelledby="warningModalLabel" aria-hidden="true"
+            data-target="warningModal">
+            <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content text-center modal-bg-warning">
+                    <div class="container-fluid text-center">
+                        <p class="modal-title" id="warningModalLabel">Something is not right with your selection! </p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Warning Modal -->
 
+    <!-- Input Error Modal -->
+    <section>
+        <div class="modal fade " id="inputErrorModal" tabindex="-1" aria-labelledby="inputErrorModal" aria-hidden="true"
+            data-target="inputErrorModal">
+            <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content text-center modal-bg-warning">
+                    <div class="container-fluid text-center">
+                        <p class="modal-title" id="inputErrorModalLabel">You didn't enter a Number</p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Input Error Modal -->
 
+    <!-- Incorrect Answer Modal -->
+    <section>
+        <div class="modal fade " id="incorrectAnswerModal" tabindex="-1" aria-labelledby="incorrectAnswerModal"
+            aria-hidden="true" data-target="incorrectAnswerModal">
+            <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content text-center modal-bg-warning">
+                    <div class="container-fluid text-center">
+                        <p class="modal-title" id="incorrectAnswerModalLabel">Sorry that is not right. <br>The answer is
+                        <div class="answer" id="answer"></div>
+                        </p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Incorrect Answer Error Modal -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

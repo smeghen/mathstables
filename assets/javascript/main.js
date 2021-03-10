@@ -13,7 +13,7 @@ function getGameType() {
         document.getElementById("operand3").innerHTML = "x";
     }
     else if (type === "Division") {
-        document.getElementById("operand3").innerHTML = "/";
+        document.getElementById("operand3").innerHTML = "÷";
     }
 }
 /* Function takes the number selection from dropdown menu, and displays it on Game Modal*/
@@ -22,7 +22,6 @@ function getTableNumber() {
     var number = tableNumber.options[tableNumber.selectedIndex].value;
     document.getElementById("operand2").innerHTML = number;
 }
-
 
 /*    Code for validating dropdown menu selection found on Stackoverflow and modified https://stackoverflow.com/questions/15371162/javascript-dropdown-validation-and-alert */
 /*Function checks that a validate input has been selected from the dropdown menus and returns message if not. For valid inputs it hides buttons and dropdown and displays selection 
@@ -34,7 +33,9 @@ function validateInput() {
     var number = tableNumber.options[tableNumber.selectedIndex].value;
     if (type === "Choose a Game to Play" ||
         number === "Choose the tables for the Game") {
-        alert("Selections not made correctly.");
+        errorSound();
+        /* Code for calling a modal to open without using a button was found on Stackoerflow. https://stackoverflow.com/questions/36672304/bootstrap-mymodal-modalshow-is-not-working */
+        $("#warningModal").modal("show");
         return false;
     }
     else {
@@ -45,6 +46,7 @@ function validateInput() {
             var type = document.getElementById("type");
             var selection = document.getElementById("selection");
             var home = document.getElementById("home");
+            var backbutton = document.getElementById("back");
             if (validatebutton.style.display === "none") {
                 validatebutton.style.display = "block";
                 type.style.display = "block";
@@ -57,10 +59,12 @@ function validateInput() {
             if (letsgobutton.style.display === "block") {
                 letsgobutton.style.display = "none";
                 selection.style.display = "none";
+                backbutton.style.display = "none";
             }
             else {
                 letsgobutton.style.display = "inline-block";
                 selection.style.display = "block";
+                backbutton.style.display = "inline-block";
             }
         }
         hideSelect();
@@ -72,12 +76,11 @@ function validateInput() {
 /*  Random number generator between 1 and 12. Display on game */
 /* For subtraction and division to work as per tables the number range has to be adjusted depending on user number choice otherwise questions not related to the maths
 tables will be displayed which ar out of the scope of the game  */
-document.getElementById("startgame").addEventListener("click", displayRandomNumber);
+
 function displayRandomNumber() {
     let choice = document.getElementById("gameType").value;
     let numChoice = document.getElementById("tableNumber").value;
     numChoice = Number(numChoice);
-
     if (choice === "Addition") {
         let firstNum = parseInt(Math.random() * 12) + 1;
         document.getElementById("operand1").textContent = firstNum;
@@ -99,13 +102,11 @@ function displayRandomNumber() {
     }
 }
 
-
 /* Function calls the different calculation functions depending on the user selection*/
 function runGame() {
     let game = document.getElementById("gameType").value;
     let num1 = parseInt(document.getElementById("operand1").textContent);
     let num2 = parseInt(document.getElementById("operand2").textContent);
-
     if (game === "Addition") {
         let answer = num1 + num2;
         return answer;
@@ -119,43 +120,48 @@ function runGame() {
         let answer = num1 / num2;
         return answer;
     }
-
 }
 
 /* Code for taking enter or button click to trigger take the guess from input field. Code found on www.tutorialspoint.com and modified.
 https://www.tutorialspoint.com/how-to-trigger-a-button-click-on-keyboard-enter-with-javascript */
 var inputText = document.getElementById("guess");
-   inputText.addEventListener("keyup", function(event) {
-      if (event.keyCode === 13) {
-         event.preventDefault();
-         document.getElementById("enterguess").click();
-      }
-   });
+inputText.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("enterguess").click();
+    }
+});
 
- /* Function to check user answer against actual answer*/  
+/* Function to check user answer against actual answer*/
+
 function checkAnswer() {
     let guess = parseInt(document.getElementById('guess').value);
     if (isNaN(guess)) {
-        alert("Your answer is not a number! Please enter again!")
+        errorSound();
+        $("#inputErrorModal").modal("show");
 
     }
     else {
         let calculatedAnswer = runGame();
         let isCorrect = guess === calculatedAnswer;
-
         if (isCorrect) {
             displayScore();
-            alert("Hey! You got it right! :D");
-
+            correctSound();
+            document.getElementById('guess').value = '';
+            displayRandomNumber();
         } else {
-            alert(`Sorry the correct answer is ${calculatedAnswer}!`);
-
+            wrongSound();
+            document.getElementById("answer").textContent = calculatedAnswer;
+            $("#incorrectAnswerModal").modal("show");
+            setTimeout(function () {
+                $("#incorrectAnswerModal").modal('hide');
+            }, 2000);
         }
     }
     /* Clear user guess from input box  */
+    document.getElementById('guess').focus();
     document.getElementById('guess').value = '';
     displayRandomNumber();
-    
 }
 
 function displayScore() {
@@ -166,7 +172,6 @@ function displayScore() {
 function hideStart() {
     var startbutton = document.getElementById("startgame");
     var endgamebutton = document.getElementById("endgame");
-
     if (startbutton.style.display === "none") {
         startbutton.style.display = "block";
     }
@@ -175,9 +180,24 @@ function hideStart() {
     }
     if (endgamebutton.style.display === "block") {
         endgamebutton.style.display = "none";
-
     }
     else {
         endgamebutton.style.display = "inline-block";
     }
+    document.getElementById('guess').focus();
+}
+
+function wrongSound() {
+    audio = new Audio("assets/sounds/wrong.mp3");
+    audio.play();
+}
+
+function correctSound() {
+    audio = new Audio("assets/sounds/correct.mp3");
+    audio.play();
+}
+
+function errorSound() {
+    audio = new Audio("assets/sounds/Error.mp3");
+    audio.play();
 }

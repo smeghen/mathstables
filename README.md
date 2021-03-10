@@ -6,6 +6,7 @@
 
 This site was designed for the second milestone project in Full Stack Software Development with the Code Institute, based on the learnings from HTML, CSS and User Centric Design,  JavaScript Fundamentals and Interactive Frontend Development modules.
 
+![Site mockup](assets/images/mockup.png "Site mockup")
 ---
 
 ## Maths Tables
@@ -19,6 +20,9 @@ are distracted and are learning at the same time. The game is based on
 the 1 to 12 tables that are taught in schools, a selection of which 
 number and type of arithmetic can be made with the game then provides 
 questions based on the selection. 
+
+ The live website can be found here: https://smeghen.github.io/mathstables/
+
 
 ---
 ### User Experience (UX)
@@ -68,7 +72,9 @@ Here is the wireframes that I used as the basis of the design
 for the site. These were created using Balsamiq.
 
 
+![Wireframe mockup](assets/images/wireframe.png "Wireframe mockup")
 
+ For the pfd version of the wireframes click [here.](https://github.com/smeghen/mathstables/blob/master/assets/images/wireframe.pdf)
  
 
 ### Differences to Design
@@ -96,6 +102,20 @@ for the site. These were created using Balsamiq.
 * Google Chrome DevTools – was used extensively during coding to check the responsiveness of the site with the addition of new features.
 ---
 # Testing
+
+After asking friends and family to test the site some feedback that I received was focused on the start button on the game modal. 
+There was a little confusion as to how they could start the game by just entering numbers into the guess box without hitting the start
+button. This prompted the incorrect answer modal to appear and the game would continue as normal, but the start button would not change to 
+the end button so people found it hard to exit out of the game. This was recitify this by removing the start button and begining the game
+once the game modal appeared.
+
+Also, from feedback my error handling for the user guess was not robust enough. At first I was only checking for NaN, which is fine
+not a blank text box and entering a nonnumerical character. But what was found was that by putting a number followed by a letter was 
+being accepted as valid entry and returning a incorrect answer. This was rectified by changing the text box input table type to "number", 
+so only numbers can be accepted in the guess box.
+
+Another observation from a tester was on smaller screens it would be easier to use if the keypad for input to default to number keypad, I found the solution
+on creativeblog.com. By setting the input pattern="[0-9]*" this will cover both android and iOS.
 
 --- 
 
@@ -187,13 +207,30 @@ Another issue with this function was the variable numChoice, when checking on de
 
     } 
 
-This formula allows 0 to be picked and multiplying 0 by the numChoice will still return 0. Overcame this issue by adding a check on the random number being provided. If it is 0, the numChoice as the random number, which is the equivalent to adding 1 to the random number, as done for the other equations to keep the number range from 1 to 12. 
+This formula allows 0 to be picked and multiplying 0 by the numChoice will still return 0. Overcame this issue by adding a check on the random number being provided.
+ If it is 0, the numChoice is the random number, which is the equivalent to adding 1 to the random number, as done for the other equations to keep the number range from 1 to 12. 
 
 ---
 
 # Credits
 
+Used Am I Responsive? website to get mockup image of site on various devices. http://ami.responsivedesign.is/?ref=producthunt
 
+Sounds downloaded from https://bigsoundbank.com/
+
+Code for taking input when either enter key or button click is used. https://www.tutorialspoint.com/how-to-trigger-a-button-click-on-keyboard-enter-with-javascript
+
+Code to hide elements on click found on w3schools. https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+
+Code for validating dropdown menu selection found on Stackoverflow. https://stackoverflow.com/questions/15371162/javascript-dropdown-validation-and-alert 
+
+Code found to get inputs from dropdown menu.  https://mkyong.com/javascript/javascript-get-selected-value-from-dropdown-list/
+
+Code for calling a Modal to open using JavaScript. https://stackoverflow.com/questions/36672304/bootstrap-mymodal-modalshow-is-not-working
+
+Background Image for site was a photo by Magda Ehlers taken from Pexels. https://www.pexels.com/photo/blue-red-and-yellow-stripe-surface-1329297/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels
+
+Input type and pattern for keypad display on small screens found at creativeblog.com. https://www.creativebloq.com/html5/12-html5-tricks-mobile-81412803
 
 ---
 
