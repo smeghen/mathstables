@@ -112,6 +112,11 @@ of the site.
 
 ### Features to be Implemented in Future
 
+* Extra games options like selecting all equation types or all table numbers, which
+add extra difficulty.
+* Add a time limit to the games.
+* Move the number range beyond the 1 to 12 tables.
+* Feedback form for sending comments on the games or suggestions for improvements/new games.
 
 
 ---
