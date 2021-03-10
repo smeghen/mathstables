@@ -99,6 +99,7 @@ for the site. These were created using Balsamiq.
 * Autoprefixer - was used to parse  CSS and add vendor prefixes to CSS rules via https://autoprefixer.github.io/
 * W3 HTML Validation was done via https://validator.w3.org/
 * W3 CSS Validation was done via https://jigsaw.w3.org/css-validator/
+* Validation of JavaScript was done via https://jshint.com/
 * Google Chrome DevTools – was used extensively during coding to check the responsiveness of the site with the addition of new features.
 ---
 # Testing
