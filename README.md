@@ -17,9 +17,9 @@ addition, subtraction, multiplication and division. The idea came to me
 while home-schooling my children during COVID-19 enforced lockdown. 
 The aim is to turn the learning experience into a game so that children 
 are distracted and are learning at the same time. The game is based on 
-the 1 to 12 tables that are taught in schools, a selection of which 
-number and type of arithmetic can be made with the game then provides 
-questions based on the selection. 
+the 1 to 12 tables that are taught in schools, by selecting the 
+number and type of arithmetic to be used in the game random questions are
+put to the user based on their selection. 
 
  The live website can be found here: https://smeghen.github.io/mathstables/
 
@@ -79,6 +79,36 @@ for the site. These were created using Balsamiq.
 
 ### Differences to Design
 
+There were several changes to the original design that I had for the site. Firstly, 
+I removed the navigation links from the Home page because they were making the page too busy on smaller
+screen sizes and also I felt that with the same links being provided with buttons there was unnecessary
+duplication. 
+
+For the Game Selection modal and the game type selection, I changed the design from an accoridion to a 
+dropdown menu, to mirror the table selection option. I felt that it made the modal much easier to understand 
+the selection process and gave a better overall look to the modal. Within this modal I also added a selection 
+confirmation display. This was done so that rather than going straight into the game, if the user made a 
+mistake during selection it would be an oppurtunity to go back and change their selection.
+
+On the Games Modal I had not original planned to have an End Game button and rely on the user to use the close
+modal x to end the game. During development I felt that for ease of use of the game a button would be better to have 
+and help with easier navigation of the site.
+
+In the original design I had planned to have pop ups for both correct and incorrect answers. This I changed to used a pop up 
+for incorrect answers only and instead went with a ping sound for the correct answer. The decision for this was based
+on easier game play and giving the user the chance to have an instant acknowledgment of success. I retained the incorrect
+pop up as there is a need to show the user the correct answer to the question, but I did decide to remove buttons and instead
+the pop up can be closed by either clicking on the close x, clicking outside the pop up or the pop up closing itself
+after 2 seconds display. Ease of use was the decision for these options.
+
+Sounds were also added to not just the correct answer notification, but I also added a buzzer noise for and incorrect answer and 
+a warning buzz for not making valid selections on the Game Select modal and not entering a guess on the Games modal. I felt
+sounds would give an quick prompt to the target users for success and something not right, thus aiding in the overall experience 
+of the site.
+
+
+
+
 
 ### Features to be Implemented in Future
 
@@ -107,7 +137,7 @@ for the site. These were created using Balsamiq.
 After asking friends and family to test the site some feedback that I received was focused on the start button on the game modal. 
 There was a little confusion as to how they could start the game by just entering numbers into the guess box without hitting the start
 button. This prompted the incorrect answer modal to appear and the game would continue as normal, but the start button would not change to 
-the end button so people found it hard to exit out of the game. This was recitify this by removing the start button and begining the game
+the end button so people found it hard to exit out of the game. This was recitify by removing the start button and beginning the game
 once the game modal appeared.
 
 Also, from feedback my error handling for the user guess was not robust enough. At first I was only checking for NaN, which is fine
