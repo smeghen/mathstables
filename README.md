@@ -23,6 +23,9 @@ put to the user based on their selection.
 
  The live website can be found here: https://smeghen.github.io/mathstables/
 
+---
+
+
 ## Table of Contents
 * [User Experience(UX)](#User-Experience)
     * [User Stories](#User-Stories)
@@ -161,18 +164,27 @@ add extra difficulty.
 ---
 # Testing
 
-After asking friends and family to test the site some feedback that I received was focused on the start button on the game modal. 
+The testing of this project was based on the layout of the site, the proper operation of buttons, dropdown menus, 
+game play, user interaction and the responsiveness of the site on various device sizes.
+
+The following browsers were used to test the website – Google Chrome, Microsoft Edge and Safari.
+
+Family members, peers of Slack and friends were asked to test the website and provide their thoughts on the user 
+experience and any bugs that they found. Within this group of people the site was viewed on the following devices
+ – Desktop, Laptop, iPad mini, iPad, iPhone 6, iPhone 8, Samsung Galaxy S6 and Huawei P30.
+
+* After asking friends and family to test the site some feedback that I received was focused on the start button on the game modal. 
 There was a little confusion as to how they could start the game by just entering numbers into the guess box without hitting the start
 button. This prompted the incorrect answer modal to appear and the game would continue as normal, but the start button would not change to 
 the end button so people found it hard to exit out of the game. This was recitify by removing the start button and beginning the game
 once the game modal appeared.
 
-Also, from feedback my error handling for the user guess was not robust enough. At first I was only checking for NaN, which is fine
+* Also, from feedback my error handling for the user guess was not robust enough. At first I was only checking for NaN, which is fine
 not a blank text box and entering a nonnumerical character. But what was found was that by putting a number followed by a letter was 
 being accepted as valid entry and returning a incorrect answer. This was rectified by changing the text box input table type to "number", 
 so only numbers can be accepted in the guess box.
 
-Another observation from a tester was on smaller screens it would be easier to use if the keypad for input to default to number keypad, I found the solution
+* Another observation from a tester was on smaller screens it would be easier to use if the keypad for input to default to number keypad, I found the solution
 on creativeblog.com. By setting the input pattern="[0-9]*" this will cover both android and iOS.
 
 --- 
