@@ -23,6 +23,28 @@ put to the user based on their selection.
 
  The live website can be found here: https://smeghen.github.io/mathstables/
 
+## Table of Contents
+* [User Experience(UX)](#User-Experience)
+    * [User Stories](#User-Stories)
+    * [Structure](#Structure)
+    * [Design](#Design)
+        * [Colour Scheme](#Colour-Scheme)
+        * [Typography](#Typography)
+        * [Imagery](#Imagery)
+        * [Wireframes](#Wireframes)
+
+    * [Differences to Design](#Differences-to-Design)
+    * [Features to be Implemented in Future](#Features-to-be-Implemented-in-Future)
+* [Technologies Used](#Technologies-Used)
+* [Testing](#Testing)
+* [Deployment](#Deployment)
+    * [GitHub Project Creation](#GitHub-Project-Creation)
+    * [Deploy with GitHub Pages](#Deploy-with-Github-Pages)
+    * [Locally](Run-Locally)
+* [Issues Encountered](#Issues-Encountered)
+* [Credits](#Credits)
+* [Acknowledgements](#Acknowledgements)
+
 
 ---
 ### User Experience (UX)
@@ -233,7 +255,7 @@ Another issue with this function was the variable numChoice, when checking on de
 
  
 
- Encountered an issue with the Subtraction equations. During some testing found that the random number generation would throw out a 0 from time to time. As you can’t divide 0 by a number and it is not part of the division tables this is technically an error in the game. I figured out that the problem was with my formula: 
+ Encountered an issue with the Division equations. During some testing found that the random number generation would throw out a 0 from time to time. As you can’t divide 0 by a number and it is not part of the division tables this is technically an error in the game. I figured out that the problem was with my formula: 
 
     if(choice === "Division"){ 
 
