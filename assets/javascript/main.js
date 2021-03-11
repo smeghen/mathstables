@@ -23,7 +23,6 @@ function getTableNumber() {
     document.getElementById("operand2").innerHTML = number;
 }
 
-
 /*    Code for validating dropdown menu selection found on Stackoverflow and modified https://stackoverflow.com/questions/15371162/javascript-dropdown-validation-and-alert */
 /*Function checks that a validate input has been selected from the dropdown menus and returns message if not. For valid inputs it hides buttons and dropdown and displays selection 
 new button to take user to game*/
@@ -83,7 +82,6 @@ function displayRandomNumber() {
     let choice = document.getElementById("gameType").value;
     let numChoice = document.getElementById("tableNumber").value;
     numChoice = Number(numChoice);
-
     if (choice === "Addition") {
         let firstNum = parseInt(Math.random() * 12) + 1;
         document.getElementById("operand1").textContent = firstNum;
@@ -105,13 +103,11 @@ function displayRandomNumber() {
     }
 }
 
-
 /* Function calls the different calculation functions depending on the user selection*/
 function runGame() {
     let game = document.getElementById("gameType").value;
     let num1 = parseInt(document.getElementById("operand1").textContent);
     let num2 = parseInt(document.getElementById("operand2").textContent);
-
     if (game === "Addition") {
         let answer = num1 + num2;
         return answer;
@@ -125,7 +121,6 @@ function runGame() {
         let answer = num1 / num2;
         return answer;
     }
-
 }
 
 /* Code for taking enter or button click to trigger take the guess from input field. Code found on www.tutorialspoint.com and modified.
@@ -150,13 +145,11 @@ function checkAnswer() {
     else {
         let calculatedAnswer = runGame();
         let isCorrect = guess === calculatedAnswer;
-
         if (isCorrect) {
             displayScore();
             correctSound();
             document.getElementById('guess').value = '';
             displayRandomNumber();
-
         } else {
             wrongSound();
             document.getElementById("answer").textContent = calculatedAnswer;
@@ -168,11 +161,9 @@ function checkAnswer() {
         
     }
     /* Clear user guess from input box  */
-
     document.getElementById('guess').focus();
     document.getElementById('guess').value = '';
     displayRandomNumber();
-
 }
 
 function displayScore() {
@@ -183,7 +174,6 @@ function displayScore() {
 function hideStart() {
     var startbutton = document.getElementById("startgame");
     var endgamebutton = document.getElementById("endgame");
-
     if (startbutton.style.display === "none") {
         startbutton.style.display = "block";
     }
@@ -192,7 +182,6 @@ function hideStart() {
     }
     if (endgamebutton.style.display === "block") {
         endgamebutton.style.display = "none";
-
     }
     else {
         endgamebutton.style.display = "inline-block";
@@ -203,17 +192,14 @@ function hideStart() {
 function wrongSound() {
     audio = new Audio("assets/sounds/wrong.mp3");
     audio.play();
-
 }
 
 function correctSound() {
     audio = new Audio("assets/sounds/correct.mp3");
     audio.play();
-
 }
 
 function errorSound() {
     audio = new Audio("assets/sounds/Error.mp3");
     audio.play();
-
 }

@@ -25,8 +25,8 @@
                 </a>
             </nav>
         </div>
-        <!-- End Navigation Bar  -->
     </header>
+    <!-- End Navigation Bar  -->
 
     <!-- Hero Image-->
     <section>
@@ -78,7 +78,6 @@
                             know your tables.</p>
 
                         <p>Best of luck and enjoy.</p>
-
                     </div>
                     <div class="container-fluid text-center">
                         <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Home</button>
@@ -127,7 +126,6 @@
                                 </select>
                             </div>
 
-
                             <div class="input-group input-group-lg" id="table">
                                 <label class="input-group-text" for="tableNumber">Tables</label>
                                 <select class="form-select" id="tableNumber">
@@ -157,16 +155,13 @@
                         <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal" id="back"
                             onclick="document.location.reload(true)">Back</button>
                         <button type="button" class="btn btn-danger btn-lg" id="letsgo"
-                            onclick="getTableNumber();getGameType();displayRandomNumber()" data-toggle="modal" data-dismiss="modal"
-                            data-target="#gameModal">Let's
+                            onclick="getTableNumber();getGameType();displayRandomNumber()" data-toggle="modal"
+                            data-dismiss="modal" data-target="#gameModal">Let's
                             Go</button>
-
                     </div>
                 </div>
             </div>
         </div>
-
-
     </section>
     <!-- End Games Select Modal -->
 
@@ -183,10 +178,9 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <div class="modal-body d-flex justify-content-center">
-
                         </div>
-                        <h4>Score: <p id="score">0</p>
-                        </h4>
+                        <h4>Score: </h4>
+                        <p id="score">0</p>
                         <div class="card-body">
                             <div class="card-text game-text">
                                 <div class="d-inline-block" id="operand1">?</div>
@@ -210,10 +204,10 @@
     </section>
     <!-- End Game Modal -->
 
-
     <!-- Warning Modal -->
-    <section>
-        <div class="modal fade " id="warningModal" tabindex="-1" aria-labelledby="warningModalLabel" aria-hidden="true" data-target="warningModal">
+    
+        <div class="modal fade " id="warningModal" tabindex="-1" aria-labelledby="warningModalLabel" aria-hidden="true"
+            data-target="warningModal">
             <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content text-center modal-bg-warning">
                     <div class="container-fluid text-center">
@@ -225,12 +219,13 @@
                 </div>
             </div>
         </div>
-    </section>
+   
     <!-- End Warning Modal -->
 
-        <!-- Input Error Modal -->
-    <section>
-        <div class="modal fade " id="inputErrorModal" tabindex="-1" aria-labelledby="inputErrorModal" aria-hidden="true" data-target="inputErrorModal">
+    <!-- Input Error Modal -->
+    
+        <div class="modal fade " id="inputErrorModal" tabindex="-1" aria-labelledby="inputErrorModal" aria-hidden="true"
+            data-target="inputErrorModal">
             <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content text-center modal-bg-warning">
                     <div class="container-fluid text-center">
@@ -242,16 +237,18 @@
                 </div>
             </div>
         </div>
-    </section>
+    
     <!-- End Input Error Modal -->
 
     <!-- Incorrect Answer Modal -->
-    <section>
-        <div class="modal fade " id="incorrectAnswerModal" tabindex="-1" aria-labelledby="incorrectAnswerModal" aria-hidden="true" data-target="incorrectAnswerModal">
+    
+        <div class="modal fade " id="incorrectAnswerModal" tabindex="-1" aria-labelledby="incorrectAnswerModal"
+            aria-hidden="true" data-target="incorrectAnswerModal">
             <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content text-center modal-bg-warning">
                     <div class="container-fluid text-center">
-                        <p class="modal-title" id="incorrectAnswerModalLabel">Sorry that is not right. <br>The answer is<div class="answer" id="answer"></div></p>
+                        <p class="modal-title" id="incorrectAnswerModalLabel">Sorry that is not right. <br>The answer is</p>
+                        <div class="answer" id="answer"></div>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -259,11 +256,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    
     <!-- Incorrect Answer Error Modal -->
-
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
