@@ -79,22 +79,22 @@ The Game page will have a simple layout with a bright background and the maths q
 
 ## Design:
 
-Colour scheme: 
+#### Colour scheme: 
 
 The colour scheme for the site consists of Yellow, Blue and Red. These were chosen as they are bright colours to catch the attention of children, but not too distracting that they pull a user from the game play. The text will be Black as it will stand out best against these colours.
 
-Typography:
+#### Typography:
 
 The main font used throughout the site is Pangolin, which has a handwritten look about it that is less formal that other typed fonts. Sans Serif is used as a fallback font.
 
-Imagery:
+#### Imagery:
  
 The site logo I created using Free Logo Design (https://www.freelogodesign.org/)
 
 The home page image was taken by Magda Ehlers and I obtained it from Pexels
 
 
-Wireframes:
+#### Wireframes:
 
 Here is the wireframes that I used as the basis of the design
 for the site. These were created using Balsamiq.
