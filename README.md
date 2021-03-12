@@ -170,7 +170,60 @@ add extra difficulty.
 The testing of this project was based on the layout of the site, the proper operation of buttons, dropdown menus, 
 game play, user interaction and the responsiveness of the site on various device sizes.
 
+#### Manual Testing
+
 The following browsers were used to test the website – Google Chrome, Microsoft Edge and Safari.
+
+For the testing of this project I devised a spreadsheet detailing the tests to be performed for the various pages and features.
+Below is an image of a small section of this spreadsheet:
+
+![Testing spreadsheet sample](assets/images/Testingsample.PNG "Sample of Testing Spreadsheet")
+
+The full version of the spreadsheet and be downloaded [here.](https://github.com/smeghen/mathstables/blob/master/assets/images/MS2_Testing.xlsx)
+Please note this is a .xlsx file and will require excel, google docs or compatiable program to open the file.
+The testing was performed on PC, Tablet and Mobile devices and all tests passed. I have shown in the spreadsheet the tests
+that caused issues and have included notes in relation to these. 
+
+#### User Stories Testing
+
+
+> I want to immediately understand the nature of the site and be able to easily navigate through the site.
+
+This was addressed on the Home page with an explanation of the site in the centre of the page and 2 buttons to
+navigate with:
+![Home Page](assets/images/landingpage.PNG "Image of Home Page")
+
+> I want to be easily able to understand the rules of the game.
+
+Within the Info modal all the information for the game is outlined:
+![Info Modal](assets/images/info.PNG "Image of Info Modal")
+
+> I want to be easily able to make a selection of the type of game to play.
+
+The Game Select Modal is simple dropdown menus to select your options for the game to play:
+![Game Select Modal](assets/images/gameselect.PNG "Image of Game Select Modal")
+
+> I want to know if my answer is correct or incorrect.
+
+A correct answer is signalled to the user with a positive ping noise and their score increases by 1. 
+With an incorrect answer there is a negative buzzer sound and a popup message:
+![Incorrect Answer Popup](assets/images/incorrectanswer.PNG "Image of Incorrect Answer Popup")
+
+
+> I want to track my progress during the game.
+
+Progress is tracked with the score display, sounds and popups. 
+![Game Progress](assets/images/gameprogress.PNG "Image of Game Play")
+
+> I want to be able to access the site from all device types.
+
+The site was designed using the mobile first approach with the specfic understanding that the majority of users
+would be access the game on either tablets or mobile phones. To aid the users in this respect I set the keyboard 
+for these devices to default to number pad when in game play. This makes the game easier to play:
+
+![Game Play Number Pad](assets/images/number_pad.jpg "Game Play Number Pad")
+
+#### User Testing
 
 Family members, peers of Slack and friends were asked to test the website and provide their thoughts on the user 
 experience and any bugs that they found. Within this group of people the site was viewed on the following devices
@@ -189,6 +242,9 @@ so only numbers can be accepted in the guess box.
 
 * Another observation from a tester was on smaller screens it would be easier to use if the keypad for input to default to number keypad, I found the solution
 on creativeblog.com. By setting the input pattern="[0-9]*" this will cover both android and iOS.
+
+
+
 
 --- 
 
