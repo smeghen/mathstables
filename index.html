@@ -56,11 +56,12 @@
         <div class="modal fade " id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content text-center modal-bg">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                     <div class="container-fluid text-center">
                         <h1 class="modal-title" id="infoModalLabel">Info</h1>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+
                     </div>
                     <div class="modal-body">
                         <p>Maths Tables is a game for learning and practicing the Addition, Subtraction, Multiplication
@@ -98,12 +99,12 @@
             aria-hidden="true" data-backdrop="static">
             <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content text-center modal-bg">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="document.location.reload(true)">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                     <div class="container-fluid text-center">
                         <h1 class="modal-title" id="gameselectModalLabel">Games</h1>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                            onclick="document.location.reload(true)">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
                     <div class="modal-body d-flex justify-content-center">
                         <h2>Select Game Type and Tables</h2>
@@ -171,12 +172,12 @@
             data-backdrop="static">
             <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content text-center modal-bg">
-                    <div class="container-fluid text-center">
-                        <h1 class="modal-title" id="gameModalLabel">Game</h1>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
                             onclick="document.location.reload(true)">
                             <span aria-hidden="true">&times;</span>
                         </button>
+                    <div class="container-fluid text-center">
+                        <h1 class="modal-title" id="gameModalLabel">Game</h1>
                         <div class="modal-body d-flex justify-content-center">
                         </div>
                         <h4>Score: </h4>
@@ -205,58 +206,60 @@
     <!-- End Game Modal -->
 
     <!-- Warning Modal -->
-    
-        <div class="modal fade " id="warningModal" tabindex="-1" aria-labelledby="warningModalLabel" aria-hidden="true"
-            data-target="warningModal">
-            <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content text-center modal-bg-warning">
-                    <div class="container-fluid text-center">
-                        <p class="modal-title" id="warningModalLabel">Something is not right with your selection! </p>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
+
+    <div class="modal fade " id="warningModal" tabindex="-1" aria-labelledby="warningModalLabel" aria-hidden="true"
+        data-target="warningModal">
+        <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content text-center modal-bg-warning">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                <div class="container-fluid text-center">
+                    <p class="modal-title" id="warningModalLabel">Something is not right with your selection! </p>   
                 </div>
             </div>
         </div>
-   
+    </div>
+
     <!-- End Warning Modal -->
 
     <!-- Input Error Modal -->
-    
-        <div class="modal fade " id="inputErrorModal" tabindex="-1" aria-labelledby="inputErrorModal" aria-hidden="true"
-            data-target="inputErrorModal">
-            <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content text-center modal-bg-warning">
-                    <div class="container-fluid text-center">
-                        <p class="modal-title" id="inputErrorModalLabel">You didn't enter a Number</p>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
+
+    <div class="modal fade " id="inputErrorModal" tabindex="-1" aria-labelledby="inputErrorModal" aria-hidden="true"
+        data-target="inputErrorModal">
+        <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content text-center modal-bg-warning">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                <div class="container-fluid text-center">
+                    <p class="modal-title" id="inputErrorModalLabel">You didn't enter a Number</p>
+                    
                 </div>
             </div>
         </div>
-    
+    </div>
+
     <!-- End Input Error Modal -->
 
     <!-- Incorrect Answer Modal -->
-    
-        <div class="modal fade " id="incorrectAnswerModal" tabindex="-1" aria-labelledby="incorrectAnswerModal"
-            aria-hidden="true" data-target="incorrectAnswerModal">
-            <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content text-center modal-bg-warning">
-                    <div class="container-fluid text-center">
-                        <p class="modal-title" id="incorrectAnswerModalLabel">Sorry that is not right. <br>The answer is</p>
-                        <div class="answer" id="answer"></div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
+
+    <div class="modal fade " id="incorrectAnswerModal" tabindex="-1" aria-labelledby="incorrectAnswerModal"
+        aria-hidden="true" data-target="incorrectAnswerModal">
+        <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content text-center modal-bg-warning">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                <div class="container-fluid text-center">
+                    <p class="modal-title" id="incorrectAnswerModalLabel">Sorry that is not right. <br>The answer is</p>
+                    <div class="answer" id="answer"></div>
+                    
                 </div>
             </div>
         </div>
-    
+    </div>
+
     <!-- Incorrect Answer Error Modal -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
