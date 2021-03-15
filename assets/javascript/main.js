@@ -32,6 +32,7 @@ function validateInput() {
     var tableNumber = document.getElementById("tableNumber");
     var number = tableNumber.options[tableNumber.selectedIndex].value;
 
+
     if (type === "Choose a Game to Play" ||
         number === "Choose the tables for the Game") {
         errorSound();
@@ -49,6 +50,8 @@ function validateInput() {
             var home = document.getElementById("home");
             var backbutton = document.getElementById("back");
             var title = document.getElementById("gameselect-title");
+
+
             if (validatebutton.style.display === "none") {
                 validatebutton.style.display = "block";
                 type.style.display = "block";
@@ -82,20 +85,21 @@ function validateInput() {
 tables will be displayed which ar out of the scope of the game  */
 
 function displayRandomNumber() {
-    let choice = document.getElementById("gameType").value;
-    let numChoice = document.getElementById("tableNumber").value;
+    var choice = document.getElementById("gameType").value;
+    var numChoice = document.getElementById("tableNumber").value;
     numChoice = Number(numChoice);
+    var firstNum;
     if (choice === "Addition") {
-        let firstNum = parseInt(Math.random() * 12) + 1;
+        firstNum = parseInt(Math.random() * 12) + 1;
         document.getElementById("operand1").textContent = firstNum;
     } else if (choice === "Multiplication") {
-        let firstNum = parseInt(Math.random() * 12) + 1;
+        firstNum = parseInt(Math.random() * 12) + 1;
         document.getElementById("operand1").textContent = firstNum;
     } else if (choice === "Subtraction") {
-        let firstNum = parseInt(Math.random() * 12) + numChoice;
+        firstNum = parseInt(Math.random() * 12) + numChoice;
         document.getElementById("operand1").textContent = firstNum;
     } else if (choice === "Division") {
-        let firstNum = parseInt(Math.random() * 12);
+        firstNum = parseInt(Math.random() * 12);
         if (firstNum === 0) {
             firstNum = numChoice;
         } else {
@@ -108,20 +112,21 @@ function displayRandomNumber() {
 
 /* Function calls the different calculation functions depending on the user selection*/
 function runGame() {
-    let game = document.getElementById("gameType").value;
-    let num1 = parseInt(document.getElementById("operand1").textContent);
-    let num2 = parseInt(document.getElementById("operand2").textContent);
+    var game = document.getElementById("gameType").value;
+    var num1 = parseInt(document.getElementById("operand1").textContent);
+    var num2 = parseInt(document.getElementById("operand2").textContent);
+    var answer;
     if (game === "Addition") {
-        let answer = num1 + num2;
+        answer = num1 + num2;
         return answer;
     } else if (game === "Subtraction") {
-        let answer = num1 - num2;
+        answer = num1 - num2;
         return answer;
     } else if (game === "Multiplication") {
-        let answer = num1 * num2;
+        answer = num1 * num2;
         return answer;
     } else if (game === "Division") {
-        let answer = num1 / num2;
+        answer = num1 / num2;
         return answer;
     }
 }
@@ -139,15 +144,15 @@ inputText.addEventListener("keyup", function (event) {
 /* Function to check user answer against actual answer*/
 
 function checkAnswer() {
-    let guess = parseInt(document.getElementById('guess').value);
+    var guess = parseInt(document.getElementById('guess').value);
     if (isNaN(guess)) {
         errorSound();
         $("#inputErrorModal").modal("show");
 
     }
     else {
-        let calculatedAnswer = runGame();
-        let isCorrect = guess === calculatedAnswer;
+        var calculatedAnswer = runGame();
+        var isCorrect = guess === calculatedAnswer;
         if (isCorrect) {
             displayScore();
             correctSound();
@@ -161,7 +166,7 @@ function checkAnswer() {
                 $("#incorrectAnswerModal").modal('hide');
             }, 2000);
         }
-        
+
     }
     /* Clear user guess from input box  */
     document.getElementById('guess').focus();
@@ -170,7 +175,7 @@ function checkAnswer() {
 }
 
 function displayScore() {
-    let score = parseInt(document.getElementById("score").innerText);
+    var score = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++score;
 }
 
