@@ -48,14 +48,17 @@ function validateInput() {
             var selection = document.getElementById("selection");
             var home = document.getElementById("home");
             var backbutton = document.getElementById("back");
+            var title = document.getElementById("gameselect-title");
             if (validatebutton.style.display === "none") {
                 validatebutton.style.display = "block";
                 type.style.display = "block";
                 home.style.display = "block";
+                title.style.display = "block";
             } else {
                 validatebutton.style.display = "none";
                 type.style.display = "none";
                 home.style.display = "none";
+                title.style.display = "none";
             }
             if (letsgobutton.style.display === "block") {
                 letsgobutton.style.display = "none";
