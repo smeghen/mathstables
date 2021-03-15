@@ -45,7 +45,7 @@ body {
 }
 
 .jumbo-color{
-    color: #000;
+    color: #fff;
 }
 
 .btn{
@@ -56,11 +56,14 @@ body {
     width: 50%;
 }
 
+
 /*----- Info Modal -------  */
 
 .modal-bg{
     background-color: rgba(255, 223, 2, 0.9);
 }
+
+
 
 
 /*----- Games Select Modal -------  */
