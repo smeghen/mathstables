@@ -72,6 +72,11 @@ body {
 
 /*----- Games Select Modal -------  */
 
+.option-title{
+    background-color: rgba(236, 24, 24, 0.88);
+    color: #000;
+}
+
 #selection{
     display: none;
 }
