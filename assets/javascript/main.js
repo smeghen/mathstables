@@ -200,16 +200,16 @@ function hideStart() {
 }
 
 function wrongSound() {
-    audio = new Audio("assets/sounds/wrong.mp3");
+    var audio = new Audio("assets/sounds/wrong.mp3");
     audio.play();
 }
 
 function correctSound() {
-    audio = new Audio("assets/sounds/correct.mp3");
+    var audio = new Audio("assets/sounds/correct.mp3");
     audio.play();
 }
 
 function errorSound() {
-    audio = new Audio("assets/sounds/Error.mp3");
+    var audio = new Audio("assets/sounds/Error.mp3");
     audio.play();
 }
