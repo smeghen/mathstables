@@ -229,20 +229,34 @@ Family members, peers of Slack and friends were asked to test the website and pr
 experience and any bugs that they found. Within this group of people the site was viewed on the following devices
  – Desktop, Laptop, iPad mini, iPad, iPhone 6, iPhone 8, Samsung Galaxy S6 and Huawei P30.
 
-* After asking friends and family to test the site some feedback that I received was focused on the start button on the game modal. 
+* Some feedback that I received was focused on the start button on the game modal. 
 There was a little confusion as to how they could start the game by just entering numbers into the guess box without hitting the start
 button. This prompted the incorrect answer modal to appear and the game would continue as normal, but the start button would not change to 
 the end button so people found it hard to exit out of the game. This was recitify by removing the start button and beginning the game
 once the game modal appeared.
 
 * Also, from feedback my error handling for the user guess was not robust enough. At first I was only checking for NaN, which is fine
-not a blank text box and entering a nonnumerical character. But what was found was that by putting a number followed by a letter was 
-being accepted as valid entry and returning a incorrect answer. This was rectified by changing the text box input table type to "number", 
+for a blank text box and entering a nonnumerical character. But what was found was that by putting a number followed by a letter was 
+being accepted as valid entry and returning an incorrect answer. This was rectified by changing the text box input table type to "number", 
 so only numbers can be accepted in the guess box.
 
-* Another observation from a tester was on smaller screens it would be easier to use if the keypad for input to default to number keypad, I found the solution
+* Another observation from a tester was on smaller screens it would be easier to use if the keypad for input was set to default to number keypad, I found the solution
 on creativeblog.com. By setting the input pattern="[0-9]*" this will cover both android and iOS.
 
+#### Validators
+
+I used the  W3 HTML Validation and got only one error message:
+
+![HTML Validator Results](assets/images/HTMLValidator.png "HTML Validator Results")
+
+As this is helping to validate that numbers are only entered by the user and it triggers the number keypad on small
+screens, both of which aid in a better user experience. So based on these reasons I choose to ignore the error.
+
+W3 CSS Validation was used to check the CSS used for the site:
+
+![CSS Validator Results](assets/images/CSSValidation.PNG "CSS Validator Results")
+
+The two error messages relate to the Bootstrap cdn and are both out of my control.
 
 
 

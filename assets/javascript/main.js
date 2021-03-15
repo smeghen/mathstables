@@ -41,42 +41,44 @@ function validateInput() {
         return false;
     }
     else {
-        /*Code found on w3schools to hide elements on click. Modified to hide items after inputs have been validated (https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp) */
-        function hideSelect() {
-            var validatebutton = document.getElementById("validate");
-            var letsgobutton = document.getElementById("letsgo");
-            var type = document.getElementById("type");
-            var selection = document.getElementById("selection");
-            var home = document.getElementById("home");
-            var backbutton = document.getElementById("back");
-            var title = document.getElementById("gameselect-title");
 
-
-            if (validatebutton.style.display === "none") {
-                validatebutton.style.display = "block";
-                type.style.display = "block";
-                home.style.display = "block";
-                title.style.display = "block";
-            } else {
-                validatebutton.style.display = "none";
-                type.style.display = "none";
-                home.style.display = "none";
-                title.style.display = "none";
-            }
-            if (letsgobutton.style.display === "block") {
-                letsgobutton.style.display = "none";
-                selection.style.display = "none";
-                backbutton.style.display = "none";
-            }
-            else {
-                letsgobutton.style.display = "inline-block";
-                selection.style.display = "block";
-                backbutton.style.display = "inline-block";
-            }
-        }
         hideSelect();
         document.getElementById("selectedType").innerHTML = type;
         document.getElementById("selectedNumber").innerHTML = number;
+    }
+}
+
+/*Code found on w3schools to hide elements on click. Modified to hide items after inputs have been validated (https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp) */
+function hideSelect() {
+    var validatebutton = document.getElementById("validate");
+    var letsgobutton = document.getElementById("letsgo");
+    var type = document.getElementById("type");
+    var selection = document.getElementById("selection");
+    var home = document.getElementById("home");
+    var backbutton = document.getElementById("back");
+    var title = document.getElementById("gameselect-title");
+
+
+    if (validatebutton.style.display === "none") {
+        validatebutton.style.display = "block";
+        type.style.display = "block";
+        home.style.display = "block";
+        title.style.display = "block";
+    } else {
+        validatebutton.style.display = "none";
+        type.style.display = "none";
+        home.style.display = "none";
+        title.style.display = "none";
+    }
+    if (letsgobutton.style.display === "block") {
+        letsgobutton.style.display = "none";
+        selection.style.display = "none";
+        backbutton.style.display = "none";
+    }
+    else {
+        letsgobutton.style.display = "inline-block";
+        selection.style.display = "block";
+        backbutton.style.display = "inline-block";
     }
 }
 
