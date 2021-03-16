@@ -258,6 +258,15 @@ W3 CSS Validation was used to check the CSS used for the site:
 
 The two error messages relate to the Bootstrap cdn and are both out of my control.
 
+JSHint was used to validate the JavaScript:
+
+![JSHint Validator Results](assets/images/JSHint.PNG "JSHint Validator Results")
+
+The undefined variables of $ relate to my use of a small bit of JQuery, but I he got the cdn for it at the bottom
+of index.html page.
+
+
+
 
 
 --- 
