@@ -40,6 +40,10 @@ put to the user based on their selection.
     * [Features to be Implemented in Future](#Features-to-be-Implemented-in-Future)
 * [Technologies Used](#Technologies-Used)
 * [Testing](#Testing)
+    * [Manual Testing](#Manual-Testing)
+    * [User Stories Testing](#User-Stories-Testing)
+    * [User Testing](#User-Testing)
+    * [Validators](Validators)
 * [Deployment](#Deployment)
     * [GitHub Project Creation](#GitHub-Project-Creation)
     * [Deploy with GitHub Pages](#Deploy-with-Github-Pages)
@@ -122,14 +126,14 @@ On the Games Modal I had not original planned to have an End Game button and rel
 modal x to end the game. During development I felt that for ease of use of the game a button would be better to have 
 and help with easier navigation of the site.
 
-In the original design I had planned to have pop ups for both correct and incorrect answers. This I changed to used a pop up 
+In the original design I had planned to have pop ups for both correct and incorrect answers. This I changed to a pop up 
 for incorrect answers only and instead went with a ping sound for the correct answer. The decision for this was based
 on easier game play and giving the user the chance to have an instant acknowledgment of success. I retained the incorrect
 pop up as there is a need to show the user the correct answer to the question, but I did decide to remove buttons and instead
 the pop up can be closed by either clicking on the close x, clicking outside the pop up or the pop up closing itself
 after 2 seconds display. Ease of use was the decision for these options.
 
-Sounds were also added to not just the correct answer notification, but I also added a buzzer noise for and incorrect answer and 
+Sounds were also added to not just the correct answer notification, but I also added a buzzer noise for an incorrect answer and 
 a warning buzz for not making valid selections on the Game Select modal and not entering a guess on the Games modal. I felt
 sounds would give an quick prompt to the target users for success and something not right, thus aiding in the overall experience 
 of the site.
@@ -179,7 +183,7 @@ Below is an image of a small section of this spreadsheet:
 
 ![Testing spreadsheet sample](assets/images/Testingsample.PNG "Sample of Testing Spreadsheet")
 
-The full version of the spreadsheet and be downloaded [here.](https://github.com/smeghen/mathstables/blob/master/assets/images/MS2_Testing.xlsx)
+The full version of the spreadsheet can be downloaded [here.](https://github.com/smeghen/mathstables/blob/master/assets/images/MS2_Testing.xlsx)
 Please note this is a .xlsx file and will require excel, google docs or compatiable program to open the file.
 The testing was performed on PC, Tablet and Mobile devices and all tests passed. I have shown in the spreadsheet the tests
 that caused issues and have included notes in relation to these. 
@@ -218,7 +222,7 @@ Progress is tracked with the score display, sounds and popups.
 > I want to be able to access the site from all device types.
 
 The site was designed using the mobile first approach with the specfic understanding that the majority of users
-would be access the game on either tablets or mobile phones. To aid the users in this respect I set the keyboard 
+would be accessing the game on either tablets or mobile phones. To aid the users in this respect I set the keyboard 
 for these devices to default to number pad when in game play. This makes the game easier to play:
 
 ![Game Play Number Pad](assets/images/number_pad.jpg "Game Play Number Pad")
@@ -250,7 +254,7 @@ I used the  W3 HTML Validation and got only one error message:
 ![HTML Validator Results](assets/images/HTMLValidator.png "HTML Validator Results")
 
 As this is helping to validate that numbers are only entered by the user and it triggers the number keypad on small
-screens, both of which aid in a better user experience. So based on these reasons I choose to ignore the error.
+screens, both of which aid in a better user experience, I choose to ignore the error.
 
 W3 CSS Validation was used to check the CSS used for the site:
 
@@ -262,9 +266,7 @@ JSHint was used to validate the JavaScript:
 
 ![JSHint Validator Results](assets/images/JSHint.PNG "JSHint Validator Results")
 
-The undefined variables of $ relate to my use of a small bit of JQuery, but I he got the cdn for it at the bottom
-of index.html page.
-
+The undefined variables of $ relate to my use of a small bit of JQuery.
 
 
 
@@ -308,7 +310,7 @@ To run the code locally:
 
 
  
-
+```javascript
 function displayRandomNumber() { 
 
     let choice = document.getElementById("selectedType"); 
@@ -336,13 +338,14 @@ function displayRandomNumber() {
     } 
 
     }  
+```
 
 The first if statement was being confirmed true for all selections and returning the random number range of 1 to 12. Using chrome dev tools I was able to find that the variable of choice was not being defined correctly so it could not be used correctly in the if else statement. This was fixed by changing the variable declaration to: 
 
  
-
+```javascript
     let choice = document.getElementById("selectedType").value; 
-
+```
 Another issue with this function was the variable numChoice, when checking on devtools, found that it was a string and would not then work in the formula. This was overcome by converting it to a number using the function Number(). 
 
 
@@ -350,7 +353,7 @@ Another issue with this function was the variable numChoice, when checking on de
  
 
  Encountered an issue with the Division equations. During some testing found that the random number generation would throw out a 0 from time to time. As you can’t divide 0 by a number and it is not part of the division tables this is technically an error in the game. I figured out that the problem was with my formula: 
-
+```javascript
     if(choice === "Division"){ 
 
     let firstNum = parseInt(Math.random() * 12) * numChoice;  
@@ -358,10 +361,21 @@ Another issue with this function was the variable numChoice, when checking on de
     document.getElementById("operand1").textContent = firstNum; 
 
     } 
-
+```
 This formula allows 0 to be picked and multiplying 0 by the numChoice will still return 0. Overcame this issue by adding a check on the random number being provided.
  If it is 0, the numChoice is the random number, which is the equivalent to adding 1 to the random number, as done for the other equations to keep the number range from 1 to 12. 
-
+```javascript
+else if (choice === "Division") {
+        firstNum = parseInt(Math.random() * 12);
+        if (firstNum === 0) {
+            firstNum = numChoice;
+        } else {
+            firstNum = firstNum * numChoice;
+            document.getElementById("operand1").textContent = firstNum;
+        }
+        document.getElementById("operand1").textContent = firstNum;
+    }
+```    
 ---
 
 # Credits
